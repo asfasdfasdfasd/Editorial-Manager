@@ -1,41 +1,76 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import {
+    FaFacebookF,
+    FaXTwitter,
+    FaEnvelope,
+    FaShareNodes,
+    FaWhatsapp,
+    FaRedditAlien,
+    FaLinkedinIn
+} from 'react-icons/fa6';
 
-const Footer: React.FC = () => {
-    const footerLinks = [
-        "Instructions for Authors",
-        "Reviewer Guidelines",
-        "About the Journal",
-        "Language Editing Services",
-        "Contact Editorial Office",
-        "Frequently Asked Questions"
+import { PiMicrosoftOutlookLogoLight } from "react-icons/pi";
+
+const Footer = () => {
+    const socialShares = [
+        { icon: <FaFacebookF size={18} />, color: 'bg-[#4267B2]', label: 'Facebook' },
+        { icon: <FaXTwitter size={18} />, color: 'bg-black', label: 'X' },
+        { icon: <FaEnvelope size={18} />, color: 'bg-[#7f8c8d]', label: 'Email' },
+        { icon: <FaShareNodes size={18} />, color: 'bg-[#8dc63f]', label: 'Share' },
+        { icon: <PiMicrosoftOutlookLogoLight size={18} />, color: 'bg-[#0078d4]', label: 'Outlook' },
+        { icon: <FaWhatsapp size={18} />, color: 'bg-[#25D366]', label: 'WhatsApp' },
+        { icon: <FaRedditAlien size={18} />, color: 'bg-[#FF4500]', label: 'Reddit' },
+        { icon: <FaLinkedinIn size={18} />, color: 'bg-[#0077B5]', label: 'LinkedIn' },
     ];
 
     return (
-        <footer className="mt-12 mb-8 px-4 w-full max-w-6xl mx-auto">
-            {/* Links Grid */}
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 bg-slate-300 rounded-lg overflow-hidden border border-slate-300 gap-px">
-                {footerLinks.map((link, idx) => (
-                    <Link
-                        key={idx}
-                        to="#"
-                        className="bg-slate-200 flex items-center justify-center text-center p-3 text-xs sm:text-sm font-semibold text-slate-700 hover:bg-slate-100 hover:text-blue-700 transition-colors h-full w-full"
+        <footer className="w-full bg-slate-50 border-t border-slate-200">
+            {/* Upper Section: Publisher Info [cite: 20] */}
+            <div className="py-6 px-4 text-center max-w-4xl mx-auto space-y-1.5">
+                <p className="text-slate-800 font-bold text-sm md:text-base tracking-wide">
+                    © 2026 Indian Journal of Pharmacy and Pharmacology [cite: 20]
+                </p>
+                <p className="text-slate-600 text-xs md:text-sm font-medium">
+                    Published by{' '}
+                    <span className="font-semibold text-slate-800">IP Innovative Publication Pvt. Ltd.</span>{' '}
+                    (
+                    <a
+                        href="https://www.ipinnovative.com"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-blue-600 hover:underline hover:text-blue-700 transition-colors"
                     >
-                        {link}
-                    </Link>
+                        www.ipinnovative.com
+                    </a>
+                    ) [cite: 20]
+                </p>
+            </div>
+
+            {/* Middle Section: Full Width Color Strip Tabs  */}
+            <div className="w-full grid grid-cols-4 sm:grid-cols-8 shadow-inner">
+                {socialShares.map((tab, idx) => (
+                    <button
+                        key={idx}
+                        aria-label={`Share on ${tab.label}`}
+                        className={`${tab.color} text-white py-3.5 flex items-center justify-center transition-all duration-200 hover:brightness-110 hover:-translate-y-[2px] active:translate-y-0 focus:outline-none`}
+                    >
+                        {tab.icon}
+                    </button>
                 ))}
             </div>
 
-            {/* Informational Text */}
-            <div className="mt-6 text-sm text-slate-600 space-y-4 leading-relaxed">
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                </p>
-                <p>
-                    <strong>First-time users:</strong> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet consectetur.
-                </p>
-                <p>
-                    <strong>Repeat users:</strong> Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Phasellus egestas tellus rutrum tellus pellentesque eu tincidunt tortor aliquam.
+            {/* Bottom Section: Maroon Copyright Bar [cite: 20] */}
+            <div className="w-full bg-[#801a1a] text-white py-4 px-4 text-center border-t border-red-950/20">
+                <p className="text-xs md:text-sm font-light tracking-wider opacity-90">
+                    Copyright © 2026 Innovative Publication <span className="mx-1.5 opacity-40">|</span> By :{' '}
+                    <a
+                        href="https://www.ipinnovative.com"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="font-medium hover:underline tracking-normal"
+                    >
+                        www.ipinnovative.com
+                    </a>
+                    . All rights reserved. [cite: 20]
                 </p>
             </div>
         </footer>

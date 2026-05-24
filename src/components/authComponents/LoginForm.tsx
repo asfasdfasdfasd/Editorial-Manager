@@ -1,131 +1,183 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import { FaEye, FaEyeSlash,  FaAward, FaBookOpen } from 'react-icons/fa6';
 
-interface AuthFormProps {
-    isIntegrated?: boolean;
+interface LoginErrors {
+    email?: string;
+    password?: string;
 }
 
-const AuthForm: React.FC<AuthFormProps> = ({ isIntegrated = false }) => {
-    const [username, setUsername] = useState('');
+const AuthForm: React.FC = () => {
+    const navigate = useNavigate();
+    const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    const [rememberMe, setRememberMe] = useState(false);
+    const [showPassword, setShowPassword] = useState(false);
+    const [errors, setErrors] = useState<LoginErrors>({});
 
-    const handleLoginProcess = (e: React.FormEvent) => {
+    const handleLogin = (e: React.FormEvent) => {
         e.preventDefault();
-        console.log('Login process initiated for:', username);
-        // Future login logic here
+        const newErrors: LoginErrors = {};
+
+        // Simple validation checks
+        if (!email.trim()) {
+            newErrors.email = 'Email address or ID is required.';
+        }
+        if (!password) {
+            newErrors.password = 'Password is required.';
+        }
+
+        if (Object.keys(newErrors).length > 0) {
+            setErrors(newErrors);
+        } else {
+            setErrors({});
+            // Log actions for submission
+            console.log('Login credentials submitted:', { email, password, rememberMe });
+            alert('Logged in successfully!');
+            navigate('/'); // Redirect to home page
+        }
     };
 
-    // Define dynamic styles based on the context
-    const cardClasses = isIntegrated
-        ? 'w-full max-w-2xl mx-auto bg-white p-6 rounded-lg shadow-sm border border-gray-200'
-        : 'w-full max-w-4xl bg-white p-8 md:p-10 rounded-2xl shadow-xl border mt-5 border-gray-100';
-
-
-    // The actual form content
-    const formContent = (
-        <div className={cardClasses}>
-            <div className="relative border border-gray-300 rounded-md p-6 mt-4">
-                {/* Floating Heading imitating the "Please Enter the Following" legend */}
-                <h2 className="absolute -top-3.5 left-4 bg-white px-2 text-sm font-semibold text-gray-900 border border-gray-300 rounded-sm shadow-sm">
-                    Please Enter the Following
-                </h2>
-
-                <form onSubmit={handleLoginProcess} className="w-full mt-2">
-                    {/* Inputs Section */}
-                    <div className={`space-y-4 mx-auto mb-5 ${isIntegrated ? 'max-w-full' : 'max-w-md'}`}>
-                        <div className="flex flex-col sm:flex-row sm:items-center gap-2">
-                            <label className="sm:w-1/3 text-sm font-medium text-gray-700 sm:text-right" htmlFor="username">
-                                Username:
-                            </label>
-                            <input
-                                id="username"
-                                type="text"
-                                value={username}
-                                onChange={(e) => setUsername(e.target.value)}
-                                className="flex-1 px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-all sm:w-2/3"
-                                required
-                            />
-                        </div>
-
-                        <div className="flex flex-col sm:flex-row sm:items-center gap-2">
-                            <label className="sm:w-1/3 text-sm font-medium text-gray-700 sm:text-right" htmlFor="password">
-                                Password:
-                            </label>
-                            <input
-                                id="password"
-                                type="password"
-                                value={password}
-                                onChange={(e) => setPassword(e.target.value)}
-                                className="flex-1 px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-all sm:w-2/3"
-                                required
-                            />
-                        </div>
-
-                        <div className='flex justify-end text-sm m-0'>
-                            <Link to="/account-finder" className="underline text-blue-600 hover:text-blue-800 hover:underline transition-colors">
-                                Forgot details ?
-                            </Link>
-                        </div>
-
-                        {/* Hidden submit ensures Enter key works */}
-                        <button type="submit" className="hidden">Submit</button>
-                    </div>
-
-                    {/* 4 Login Buttons */}
-                    <div className="flex flex-col sm:flex-row justify-center gap-2 sm:gap-3 mb-8">
-                        <Link to="#" className="flex-1 sm:flex-none">
-                            <button type="button" className="w-full px-3 py-2 bg-gray-100 hover:bg-gray-200 text-gray-800 text-xs sm:text-sm font-medium rounded border border-gray-300 shadow-sm transition-colors whitespace-nowrap">
-                                Author Login
-                            </button>
-                        </Link>
-
-                        <Link to="#" className="flex-1 sm:flex-none">
-                            <button type="button" className="w-full px-3 py-2 bg-gray-100 hover:bg-gray-200 text-gray-800 text-xs sm:text-sm font-medium rounded border border-gray-300 shadow-sm transition-colors whitespace-nowrap">
-                                Reviewer Login
-                            </button>
-                        </Link>
-
-                        <Link to="#" className="flex-1 sm:flex-none">
-                            <button type="button" className="w-full px-3 py-2 bg-gray-100 hover:bg-gray-200 text-gray-800 text-xs sm:text-sm font-medium rounded border border-gray-300 shadow-sm transition-colors whitespace-nowrap">
-                                Editor Login
-                            </button>
-                        </Link>
-
-                        <Link to="#" className="flex-1 sm:flex-none">
-                            <button type="button" className="w-full px-3 py-2 bg-gray-100 hover:bg-gray-200 text-gray-800 text-xs sm:text-sm font-medium rounded border border-gray-300 shadow-sm transition-colors whitespace-nowrap">
-                                Publisher Login
-                            </button>
-                        </Link>
-                    </div>
-
-                    {/* Bottom Links */}
-                    <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-6 text-sm">
-                        <Link to="/account-finder" className="text-blue-600 hover:text-blue-800 hover:underline transition-colors">
-                            Send Login Details
-                        </Link>
-
-                        <Link to="/signup" className="text-blue-600 hover:text-blue-800 hover:underline transition-colors">
-                            Register Now
-                        </Link>
-
-                        <Link to="#" className="text-blue-600 hover:text-blue-800 hover:underline transition-colors">
-                            Login Help
-                        </Link>
-
-                    </div>
-                </form>
-            </div>
-        </div>
-    );
-
-    // If integrated, just return the card. If standalone, wrap it in a full-page centered layout.
-    if (isIntegrated) {
-        return formContent;
-    }
-
     return (
-        <div className="flex  justify-center  bg-gray-50 p-4">
-            {formContent}
+        <div className=" bg-slate-100 flex items-center justify-center p-4 md:p-8 font-sans">
+            {/* Split-Screen Login Container  */}
+            <div className="w-full max-w-5xl my-10 bg-white border border-slate-200 shadow-2xl rounded-2xl overflow-hidden grid grid-cols-1 md:grid-cols-12 h-[470px]">
+
+                {/* Left Panel: Login Inputs  */}
+                <div className="md:col-span-7 p-6 md:p-12 flex flex-col  space-y-8">
+                    <div className="space-y-2">
+                        <h2 className="text-2xl md:text-3xl font-bold text-slate-900 tracking-tight">
+                            Login
+                        </h2>
+                        <p className="text-xs text-slate-400">
+                            Welcome back! Please enter your journal credentials to gain access.
+                        </p>
+                    </div>
+
+                    <form onSubmit={handleLogin} className="space-y-4 text-xs">
+                        {/* Email / ID Input field  */}
+                        <div className="space-y-1">
+                            <label htmlFor="email" className="font-semibold text-slate-700 block">
+                                EmailId <span className="text-red-500">*</span>
+                            </label>
+                            <input
+                                type="text"
+                                id="email"
+                                placeholder="Email Id or Password"
+                                value={email}
+                                onChange={(e) => {
+                                    setEmail(e.target.value);
+                                    if (errors.email) setErrors(prev => ({ ...prev, email: '' }));
+                                }}
+                                className={`w-full px-3 py-2.5 border rounded-md bg-slate-50 focus:outline-none focus:ring-2 transition-all ${errors.email ? 'border-red-500 focus:ring-red-100' : 'border-slate-200 focus:ring-blue-100 focus:border-blue-500'
+                                    }`}
+                            />
+                            {errors.email && <p className="text-[10px] text-red-500 font-medium">{errors.email}</p>}
+                        </div>
+
+                        {/* Password Input field with Forgot trigger link  */}
+                        <div className="space-y-1">
+                            <div className="flex items-center justify-between">
+                                <label htmlFor="password" className="font-semibold text-slate-700">
+                                    Password <span className="text-red-500">*</span>
+                                </label>
+                                <Link
+                                    to="/forgot-password"
+                                    className="text-blue-600 hover:underline font-medium text-[11px]"
+                                >
+                                    Forgot password?
+                                </Link>
+                            </div>
+                            <div className="relative">
+                                <input
+                                    type={showPassword ? 'text' : 'password'}
+                                    id="password"
+                                    placeholder="Password"
+                                    value={password}
+                                    onChange={(e) => {
+                                        setPassword(e.target.value);
+                                        if (errors.password) setErrors(prev => ({ ...prev, password: '' }));
+                                    }}
+                                    className={`w-full px-3 py-2.5 border rounded-md pr-9 bg-slate-50 focus:outline-none focus:ring-2 transition-all ${errors.password ? 'border-red-500 focus:ring-red-100' : 'border-slate-200 focus:ring-blue-100 focus:border-blue-500'
+                                        }`}
+                                />
+                                <button
+                                    type="button"
+                                    onClick={() => setShowPassword(!showPassword)}
+                                    className="absolute right-3 top-3 text-slate-400 hover:text-slate-600 transition-colors focus:outline-none"
+                                >
+                                    {showPassword ? <FaEyeSlash size={14} /> : <FaEye size={14} />}
+                                </button>
+                            </div>
+                            {errors.password && <p className="text-[10px] text-red-500 font-medium">{errors.password}</p>}
+                        </div>
+
+                        {/* Remember Me Selection Toggle  */}
+                        <div className="flex items-center pt-1">
+                            <label className="flex items-center gap-2 text-slate-600 cursor-pointer select-none">
+                                <input
+                                    type="checkbox"
+                                    checked={rememberMe}
+                                    onChange={(e) => setRememberMe(e.target.checked)}
+                                    className="rounded border-slate-300 text-blue-600 focus:ring-blue-500 h-3.5 w-3.5"
+                                />
+                                <span className="font-medium text-slate-700">Remember Me</span>
+                            </label>
+                        </div>
+
+                        {/* Primary Sign In Action Button  */}
+                        <div className="pt-2 flex justify-end">
+                            <button
+                                type="submit"
+                                className="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-2 rounded-md transition-colors shadow-sm tracking-wide text-xs focus:outline-none focus:ring-2 focus:ring-blue-200"
+                            >
+                                Sign In
+                            </button>
+                        </div>
+                    </form>
+
+                    {/* Bottom Split: Sign up Switcher & Social Quick Redirect Links  */}
+                    <div className="border-t border-slate-100 pt-4 flex flex-col sm:flex-row items-center justify-between  text-xs">
+                        <p className="text-slate-500">
+                            Don't have an account?{' '}
+                            <Link to="/signup" className="text-blue-600 hover:underline font-medium">
+                                Sign up
+                            </Link>
+                        </p>
+
+
+                    </div>
+                </div>
+
+                {/* Right Panel: Academic Journal Cover Art Placeholder Layout */}
+                <div className=" md:col-span-5 bg-linear-to-br from-blue-600 to-blue-800 p-8 text-white flex flex-col justify-between relative shadow-inner">
+                    <div className="space-y-2 opacity-80">
+                        <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-wider">
+                            <FaAward /> Peer Reviewed Journal
+                        </div>
+
+                    </div>
+
+                    {/* Simulated Mock Book Cover Art Container */}
+                    <div className="border-2 border-white/20 rounded-xl bg-slate-900/40 p-6 shadow-2xl space-y-4 backdrop-blur-sm border-l-4 border-l-teal-400">
+                        <div className="text-[10px] tracking-widest uppercase font-bold text-teal-400">Medical & Pharmacy Science</div>
+                        <h3 className="text-base font-bold leading-snug uppercase tracking-wide border-b border-white/10 pb-3">
+                            International Journal of Academic Medicine and Pharmacy
+                        </h3>
+                        <div className="flex justify-between items-center text-xs pt-1 font-medium font-mono text-slate-300">
+                            <span>VOLUME 8</span>
+                            <span>ISSUE 5</span>
+                            <span className="bg-white/10 text-white px-2 py-0.5 rounded text-[10px]">2026</span>
+                        </div>
+                    </div>
+
+                    <div className="flex items-center gap-2.5 text-xs text-white/70 font-medium">
+                        <FaBookOpen className="text-teal-400 shrink-0" />
+                        <span>Connecting global researchers across open access medical domains.</span>
+                    </div>
+                </div>
+
+            </div>
         </div>
     );
 };

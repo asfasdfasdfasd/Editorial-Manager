@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { FaUserPlus, FaLock } from 'react-icons/fa6'; // Added clean icons for auth 
 
 interface NavItem {
     label: string;
@@ -68,57 +69,69 @@ const Navbar: React.FC = () => {
     };
 
     return (
-        <header className="w-full flex flex-col shadow-sm relative z-50">
-            {/* Top Bar */}
-            <div className="bg-slate-900 text-white px-4 md:px-8 py-3 flex flex-col sm:flex-row justify-between items-center gap-4">
-                {/* Brand Logo Section  */}
-                <div className="flex items-center gap-3">
-                    <div className="bg-blue-500 rounded-full h-8 w-8 flex items-center justify-center font-bold text-sm shadow-inner text-white">
-                        S
+        <header className="w-full flex flex-col shadow-sm relative z-50 bg-white">
+            {/* Top Bar: Clean, academic brand header  */}
+            <div className="w-full px-4 md:px-8 py-4 flex flex-col md:flex-row justify-between items-center gap-4 border-b border-slate-100">
+                {/* Journal Branding Cluster  */}
+                <div className="flex flex-col sm:flex-row items-center gap-4 text-center sm:text-left">
+                    {/* Placeholder for Journal Logo Graphic  */}
+                    <div className="h-14 w-14 rounded-full border border-slate-200 bg-slate-50 flex items-center justify-center font-bold text-slate-400 text-xs shadow-sm shrink-0">
+                        LOGO
                     </div>
-                    <h1 className="text-xl md:text-2xl font-semibold tracking-wide">SVIET</h1>
+                    <div>
+                        <h1 className="text-lg md:text-xl font-bold text-slate-900 tracking-tight">
+                            International Journal of Academic Medicine and Pharmacy
+                        </h1>
+                        <div className="flex flex-wrap items-center justify-center sm:justify-start gap-x-3 gap-y-1 mt-1 text-xs text-slate-500 font-medium">
+                            <span>E-ISSN: 2687-5365</span>
+                            <span className="text-slate-300">|</span>
+                            <span>P-ISSN: 2753-6556</span>
+                        </div>
+                    </div>
                 </div>
 
-                {/* Modernized Auth Section */}
-                <div className="flex items-center gap-3 text-sm font-medium">
-                    <Link
-                        to="/login"
-                        className="text-slate-300 hover:text-white hover:bg-slate-800/60 px-3 py-1.5 rounded-md transition-all duration-200"
-                    >
-                        Login
-                    </Link>
+                {/* Modernized Rightside Action Buttons  */}
+                <div className="flex items-center gap-2 text-xs font-semibold shrink-0">
                     <Link
                         to="/signup"
-                        className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-1.5 rounded-md transition-all duration-200 shadow-sm"
+                        className="text-slate-600 hover:text-blue-600 hover:bg-slate-50 px-3 py-2 rounded-md transition-all duration-200 flex items-center gap-1.5"
                     >
+                        <FaUserPlus className="opacity-80" />
                         Register
+                    </Link>
+                    <Link
+                        to="/login"
+                        className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md transition-all duration-200 shadow-sm flex items-center gap-1.5"
+                    >
+                        <FaLock className="text-[10px]" />
+                        Login
                     </Link>
                 </div>
             </div>
 
             {/* Bottom Navigation Bar */}
-            <div className="bg-white border-b border-gray-200 px-4 md:px-8">
+            <div className="bg-slate-900 text-white px-4 md:px-8">
                 <div className="flex items-center justify-between">
                     {/* Desktop Navigation */}
-                    <nav className="hidden md:flex flex-wrap gap-1 lg:gap-3 text-sm font-medium text-slate-700">
+                    <nav className="hidden md:flex flex-wrap gap-1 lg:gap-2 text-xs lg:text-sm font-medium">
                         {navItems.map((item) => {
                             if (item.subItems) {
                                 const dropdownAlignClass = item.align === 'right' ? 'right-0' : 'left-0';
                                 return (
-                                    <div key={item.label} className="relative group py-4 px-2.5 flex items-center gap-1.5 hover:text-blue-600 cursor-pointer transition-colors">
+                                    <div key={item.label} className="relative group py-3.5 px-3 flex items-center gap-1.5 text-slate-200  cursor-pointer transition-colors hover:bg-white hover:text-slate-800">
                                         <span className="select-none">{item.label}</span>
-                                        <svg className="w-3.5 h-3.5 transition-transform duration-300 group-hover:rotate-180 text-gray-400 group-hover:text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <svg className="w-3 h-3 transition-transform duration-300 group-hover:rotate-180 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M19 9l-7 7-7-7" />
                                         </svg>
 
                                         {/* Dropdown Menu */}
-                                        <div className={`absolute top-full ${dropdownAlignClass} pt-2 w-60 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 transform translate-y-2 group-hover:translate-y-0`}>
-                                            <div className="bg-white border border-gray-100 rounded-lg shadow-xl py-1.5 ring-1 ring-black/5 overflow-hidden">
+                                        <div className={`absolute top-full ${dropdownAlignClass} pt-0 w-60 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 transform translate-y-1 group-hover:translate-y-0`}>
+                                            <div className="bg-white border border-slate-100 shadow-xl py-1 ring-1 ring-black/5 overflow-hidden">
                                                 {item.subItems.map((sub) => (
                                                     <Link
                                                         key={sub.label}
                                                         to={sub.href}
-                                                        className="block px-4 py-2.5 text-xs text-slate-700 hover:bg-blue-50 hover:text-blue-700 transition-colors font-medium border-l-2 border-transparent hover:border-blue-600"
+                                                        className="block px-4 py-2.5 text-xs text-slate-700 hover:bg-slate-50 hover:text-blue-600 transition-colors font-medium border-l-2 border-transparent hover:border-blue-600"
                                                     >
                                                         {sub.label}
                                                     </Link>
@@ -132,7 +145,7 @@ const Navbar: React.FC = () => {
                                     <Link
                                         key={item.label}
                                         to={item.href || '#'}
-                                        className="py-4 px-2.5 hover:text-blue-600 transition-colors flex items-center"
+                                        className="py-3.5 px-3 text-slate-200 hover:bg-white hover:text-slate-800 transition-colors flex items-center"
                                     >
                                         {item.label}
                                     </Link>
@@ -143,10 +156,10 @@ const Navbar: React.FC = () => {
 
                     {/* Mobile Hamburger Button */}
                     <div className="flex md:hidden items-center justify-between w-full py-3">
-                        <span className="text-xs font-semibold text-slate-500 uppercase tracking-wider">Journal Navigation</span>
+                        <span className="text-xs font-semibold text-slate-400 uppercase tracking-wider">Journal Menu</span>
                         <button
                             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                            className="p-1.5 rounded-lg border border-slate-200 text-slate-700 hover:bg-slate-50 transition-colors focus:outline-none"
+                            className="p-1.5 rounded-lg border border-slate-700 text-slate-200 hover:bg-slate-800 transition-colors focus:outline-none"
                             aria-label="Toggle menu"
                         >
                             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -162,19 +175,19 @@ const Navbar: React.FC = () => {
             </div>
 
             {/* Mobile Menu Panel */}
-            <div className={`md:hidden bg-slate-50 border-b border-gray-200 transition-all duration-300 overflow-hidden ${isMobileMenuOpen ? 'max-h-[500px] opacity-100 py-3' : 'max-h-0 opacity-0 pointer-events-none'}`}>
+            <div className={`md:hidden bg-slate-950 text-white transition-all duration-300 overflow-hidden ${isMobileMenuOpen ? 'max-h-[500px] opacity-100 py-3' : 'max-h-0 opacity-0 pointer-events-none'}`}>
                 <nav className="flex flex-col px-4 gap-1">
                     {navItems.map((item) => {
                         if (item.subItems) {
                             const isExpanded = expandedMobileItem === item.label;
                             return (
-                                <div key={item.label} className="border-b border-slate-100 py-1">
+                                <div key={item.label} className="border-b border-slate-900 py-1">
                                     <button
                                         onClick={() => toggleMobileSubmenu(item.label)}
-                                        className="w-full flex items-center justify-between py-2 text-sm font-semibold text-slate-700 hover:text-blue-600 transition-colors text-left focus:outline-none"
+                                        className="w-full flex items-center justify-between py-2 text-sm font-medium text-slate-200 hover:text-white transition-colors text-left focus:outline-none"
                                     >
                                         <span>{item.label}</span>
-                                        <svg className={`w-4 h-4 transition-transform duration-300 text-slate-400 ${isExpanded ? 'rotate-180 text-blue-600' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <svg className={`w-4 h-4 transition-transform duration-300 text-slate-500 ${isExpanded ? 'rotate-180 text-white' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
                                         </svg>
                                     </button>
@@ -185,7 +198,7 @@ const Navbar: React.FC = () => {
                                                 key={sub.label}
                                                 to={sub.href}
                                                 onClick={() => setIsMobileMenuOpen(false)}
-                                                className="block py-2 text-xs font-medium text-slate-600 hover:text-blue-600 transition-colors border-l border-slate-200 pl-3"
+                                                className="block py-2 text-xs text-slate-400 hover:text-white transition-colors border-l border-slate-800 pl-3"
                                             >
                                                 {sub.label}
                                             </Link>
@@ -199,7 +212,7 @@ const Navbar: React.FC = () => {
                                     key={item.label}
                                     to={item.href || '#'}
                                     onClick={() => setIsMobileMenuOpen(false)}
-                                    className="block py-2 text-sm font-semibold text-slate-700 hover:text-blue-600 transition-colors border-b border-slate-100"
+                                    className="block py-2 text-sm font-medium text-slate-200 hover:text-white transition-colors border-b border-slate-900"
                                 >
                                     {item.label}
                                 </Link>
