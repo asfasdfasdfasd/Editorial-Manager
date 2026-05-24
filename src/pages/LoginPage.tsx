@@ -5,7 +5,7 @@ const LoginPage = () => {
     return (
         <>
             <Navbar />
-            <AuthForm isIntegrated={false} />
+            <AuthForm />
             <Footer />
         </>
     )
