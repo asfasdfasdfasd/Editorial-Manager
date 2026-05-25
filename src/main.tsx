@@ -9,6 +9,13 @@ import AccountFinderPage from './pages/AccountFinderPage'
 import ManuscriptSubmission from './pages/ManuscriptSubmission'
 import ArticleArchivePage from './pages/ArticleArchivePage'
 import IssuePreviewPage from './pages/IssuePreviewPage'
+import PeerReviewPolicy from './pages/PeerReviewPolicyPage'
+import ArchivePolicyPage from './pages/ArchivePolicyPage'
+import JournalEditorialPolicy from './pages/JournalEditorialPolicyPage'
+import ReviewerInstructionsPage from './pages/ReviewerInstructionsPage'
+import ReviewerSignupPage from './pages/ReviewerSignupPage'
+import ReviewerLoginPage from './pages/ReviewerLoginPage'
+
 createRoot(document.getElementById('root')!).render(
     <BrowserRouter>
         <Routes>
@@ -20,6 +27,12 @@ createRoot(document.getElementById('root')!).render(
             <Route path='/submit-manuscript' element={<ManuscriptSubmission />} />
             <Route path="/articles/archive" element={<ArticleArchivePage />} />
             <Route path="/archives/:slug" element={<IssuePreviewPage />} />
+            <Route path="/policies/review" element={<PeerReviewPolicy />} />
+            <Route path="/policies/achieve" element={<ArchivePolicyPage />} />
+            <Route path="/policies/editorial" element={<JournalEditorialPolicy />} />
+            <Route path="/reviewer/instructions" element={<ReviewerInstructionsPage />} />
+            <Route path="/reviewer/join" element={<ReviewerSignupPage />} />
+            <Route path="/reviewer/login" element={<ReviewerLoginPage />} />
         </Routes>
     </BrowserRouter>
 )
