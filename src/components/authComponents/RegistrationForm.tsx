@@ -123,7 +123,7 @@ const RegistrationForm: React.FC = () => {
                 <div className="w-full max-w-md bg-white border border-slate-200 shadow-xl rounded-xl p-6 md:p-8 space-y-6">
                     <div className="text-center space-y-2">
                         <h2 className="text-xl md:text-2xl font-bold text-slate-900 tracking-tight">
-                            Sign Up for Journal of Academic Medicine and Pharmacy
+                            Sign Up for Journal 
                         </h2>
                         <p className="text-xs text-slate-500">
                             Enter your email credentials to initialize verification.
@@ -358,7 +358,7 @@ const RegistrationForm: React.FC = () => {
                         <div className="border-2 border-white/20 rounded-xl bg-slate-900/40 p-6 shadow-2xl space-y-4 backdrop-blur-sm border-l-4 border-l-teal-400">
                             <div className="text-[10px] tracking-widest uppercase font-bold text-teal-400">Medical & Pharmacy Science</div>
                             <h3 className="text-base font-bold leading-snug uppercase tracking-wide border-b border-white/10 pb-3">
-                                International Journal of Academic Medicine and Pharmacy
+                                Journal of Advanced Pharmaceutical and Health Sciences Education and Research (JAPHSER)
                             </h3>
                             <div className="flex justify-between items-center text-xs pt-1 font-medium font-mono text-slate-300">
                                 <span>VOLUME 8</span>

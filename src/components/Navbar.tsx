@@ -81,19 +81,25 @@ const Navbar: React.FC = () => {
             {/* Top Bar: Clean, academic brand header */}
             <div className="w-full px-4 md:px-8 py-4 flex flex-col md:flex-row justify-between items-center gap-4 border-b border-slate-100">
                 {/* Journal Branding Cluster */}
-                <div className="flex flex-col sm:flex-row items-center gap-4 text-center sm:text-left">
-                    <div className="h-14 w-14 rounded-full border border-slate-200 bg-slate-50 flex items-center justify-center font-bold text-slate-400 text-xs shadow-sm shrink-0">
-                        LOGO
+                <div className="flex items-center sm:items-start gap-5 text-center sm:text-left">
+                    {/* Logo */}
+                    <div className="h-20 w-20 rounded-full border border-slate-200 bg-white flex items-center justify-center shadow-sm shrink-0 overflow-hidden">
+                        <img src="/logo.png" alt="Logo" className="h-18 w-18 object-contain" />
                     </div>
-                    <div>
-                        <h1 className="text-lg md:text-xl font-bold text-slate-900 tracking-tight">
-                            International Journal of Academic Medicine and Pharmacy
+
+                    {/* Text Stack */}
+                    <div className="flex flex-col gap-1.5">
+                        <h1 className="text-xl md:text-2xl font-bold text-slate-950 tracking-tight leading-snug">
+                            Journal of Advanced Pharmaceutical and Health Sciences Education and Research
                         </h1>
-                        <div className="flex flex-wrap items-center justify-center sm:justify-start gap-x-3 gap-y-1 mt-1 text-xs text-slate-500 font-medium">
-                            <span>E-ISSN: 2687-5365</span>
-                            <span className="text-slate-300">|</span>
-                            <span>P-ISSN: 2753-6556</span>
-                        </div>
+                        <p className="text-sm text-slate-700 font-medium tracking-wide">
+                            {/* E-ISSN: XXXX-XXXX <span className="mx-1 text-slate-300">|</span> */}
+                            
+                            ISSN: XXXX-XXXX
+                        </p>
+                        <p className="text-sm text-slate-600">
+                            Open-access, peer-reviewed academic journal on pharmaceutical sciences, health sciences and healthcare research
+                        </p>
                     </div>
                 </div>
 

@@ -97,7 +97,7 @@ const ManuscriptSubmission: React.FC = () => {
         setTimeout(() => {
             const platformCode = 'JAMP';
             const randomId = Math.floor(1000 + Math.random() * 9000);
-            const refNumber = `${platformCode}-2026-${randomId}`; // Generated 2026 timeline reference [cite: 13, 20]
+            const refNumber = `${platformCode}-2026-${randomId}`; 
 
             setGeneratedRefNum(refNumber);
             setIsSubmitting(false);
@@ -203,7 +203,7 @@ const ManuscriptSubmission: React.FC = () => {
                                 <label className="font-semibold text-slate-700 block">ORCID ID <span className="text-red-500">*</span></label>
                                 <input type="text" name="orcidId" value={formData.orcidId} onChange={handleChange} placeholder="0000-0000-0000-0000"
                                     className={`w-full px-3 py-2 border rounded focus:outline-none focus:ring-2 ${errors.orcidId ? 'border-red-500 focus:ring-red-100' : 'border-slate-200 focus:ring-blue-100 focus:border-blue-500'}`} />
-                                <p className="text-[10px] text-slate-400">Provide your 16-digit structure open contributor ORCID identification key[cite: 12].</p>
+                                <p className="text-[10px] text-slate-400">Provide your 16-digit structure open contributor ORCID identification key.</p>
                                 {errors.orcidId && <p className="text-[10px] text-red-500">{errors.orcidId}</p>}
                             </div>
 

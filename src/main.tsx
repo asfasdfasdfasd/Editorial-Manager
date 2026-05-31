@@ -15,6 +15,10 @@ import JournalEditorialPolicy from './pages/JournalEditorialPolicyPage'
 import ReviewerInstructionsPage from './pages/ReviewerInstructionsPage'
 import ReviewerSignupPage from './pages/ReviewerSignupPage'
 import ReviewerLoginPage from './pages/ReviewerLoginPage'
+import PublicationEthicsPage from './pages/PublicationEthicsPage'
+import JournalInformationPage from './pages/JournalInformationPage'
+import AimScopePage from './pages/AimScopePage'
+import CallForPaperPage from './pages/CallForPaperPage'
 
 createRoot(document.getElementById('root')!).render(
     <BrowserRouter>
@@ -33,6 +37,10 @@ createRoot(document.getElementById('root')!).render(
             <Route path="/reviewer/instructions" element={<ReviewerInstructionsPage />} />
             <Route path="/reviewer/join" element={<ReviewerSignupPage />} />
             <Route path="/reviewer/login" element={<ReviewerLoginPage />} />
+            <Route path="/for-authors/publication-ethics" element={<PublicationEthicsPage />} />
+            <Route path="/about-journal/information" element={<JournalInformationPage />} />
+            <Route path="/about-journal/call-for-paper" element={<CallForPaperPage />} />
+            <Route path="/about-journal/aim-scope" element={<AimScopePage />} />
         </Routes>
     </BrowserRouter>
 )

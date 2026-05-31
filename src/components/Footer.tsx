@@ -24,10 +24,9 @@ const Footer = () => {
 
     return (
         <footer className="w-full bg-slate-50 border-t border-slate-200">
-            {/* Upper Section: Publisher Info [cite: 20] */}
             <div className="py-6 px-4 text-center max-w-4xl mx-auto space-y-1.5">
                 <p className="text-slate-800 font-bold text-sm md:text-base tracking-wide">
-                    © 2026 Indian Journal of Pharmacy and Pharmacology [cite: 20]
+                    ©2026 Journal of Advanced Pharmaceutical and Health Sciences Education and Research (JAPHSER)
                 </p>
                 <p className="text-slate-600 text-xs md:text-sm font-medium">
                     Published by{' '}
@@ -41,7 +40,7 @@ const Footer = () => {
                     >
                         www.ipinnovative.com
                     </a>
-                    ) [cite: 20]
+                    )
                 </p>
             </div>
 
@@ -58,10 +57,9 @@ const Footer = () => {
                 ))}
             </div>
 
-            {/* Bottom Section: Maroon Copyright Bar [cite: 20] */}
             <div className="w-full bg-[#801a1a] text-white py-4 px-4 text-center border-t border-red-950/20">
                 <p className="text-xs md:text-sm font-light tracking-wider opacity-90">
-                    Copyright © 2026 Innovative Publication <span className="mx-1.5 opacity-40">|</span> By :{' '}
+                    Copyright ©2026 Innovative Publication <span className="mx-1.5 opacity-40">|</span> By :{' '}
                     <a
                         href="https://www.ipinnovative.com"
                         target="_blank"
@@ -70,7 +68,7 @@ const Footer = () => {
                     >
                         www.ipinnovative.com
                     </a>
-                    . All rights reserved. [cite: 20]
+                     {" "}All rights reserved.
                 </p>
             </div>
         </footer>
