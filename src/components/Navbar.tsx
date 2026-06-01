@@ -190,7 +190,7 @@ const Navbar: React.FC = () => {
             </div>
 
             {/* Mobile Menu Panel */}
-            <div className={`md:hidden bg-slate-950 text-white transition-all duration-300 overflow-hidden ${isMobileMenuOpen ? 'max-h-[500px] opacity-100 py-3' : 'max-h-0 opacity-0 pointer-events-none'}`}>
+            <div className={`md:hidden bg-slate-950 text-white transition-all duration-300 overflow-hidden ${isMobileMenuOpen ? 'max-h-125 opacity-100 py-3' : 'max-h-0 opacity-0 pointer-events-none'}`}>
                 <nav className="flex flex-col px-4 gap-1">
                     {navItems.map((item) => {
                         if (item.subItems) {

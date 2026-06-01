@@ -19,6 +19,9 @@ import PublicationEthicsPage from './pages/PublicationEthicsPage'
 import JournalInformationPage from './pages/JournalInformationPage'
 import AimScopePage from './pages/AimScopePage'
 import CallForPaperPage from './pages/CallForPaperPage'
+import PublicationChargesPage from './pages/PublicationChargesPage'
+import PublicationPolicyPage from './pages/PublicationPolicyPage'
+import OpenAccessPolicyPage from './pages/OpenAccessPolicyPage'
 
 createRoot(document.getElementById('root')!).render(
     <BrowserRouter>
@@ -38,6 +41,9 @@ createRoot(document.getElementById('root')!).render(
             <Route path="/reviewer/join" element={<ReviewerSignupPage />} />
             <Route path="/reviewer/login" element={<ReviewerLoginPage />} />
             <Route path="/for-authors/publication-ethics" element={<PublicationEthicsPage />} />
+            <Route path="/for-authors/charges" element={<PublicationChargesPage />} />
+            <Route path="/for-authors/publication-policy" element={<PublicationPolicyPage />} />
+            <Route path="/for-authors/open-access-policy" element={<OpenAccessPolicyPage />} />
             <Route path="/about-journal/information" element={<JournalInformationPage />} />
             <Route path="/about-journal/call-for-paper" element={<CallForPaperPage />} />
             <Route path="/about-journal/aim-scope" element={<AimScopePage />} />
