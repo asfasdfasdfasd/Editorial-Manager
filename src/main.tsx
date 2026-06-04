@@ -22,6 +22,7 @@ import CallForPaperPage from './pages/CallForPaperPage'
 import PublicationChargesPage from './pages/PublicationChargesPage'
 import PublicationPolicyPage from './pages/PublicationPolicyPage'
 import OpenAccessPolicyPage from './pages/OpenAccessPolicyPage'
+import InstructionsForAuthorPage from './pages/InstructionsForAuthorPage'
 
 createRoot(document.getElementById('root')!).render(
     <BrowserRouter>
@@ -44,6 +45,7 @@ createRoot(document.getElementById('root')!).render(
             <Route path="/for-authors/charges" element={<PublicationChargesPage />} />
             <Route path="/for-authors/publication-policy" element={<PublicationPolicyPage />} />
             <Route path="/for-authors/open-access-policy" element={<OpenAccessPolicyPage />} />
+            <Route path="/for-authors/instructions" element={<InstructionsForAuthorPage />} />
             <Route path="/about-journal/information" element={<JournalInformationPage />} />
             <Route path="/about-journal/call-for-paper" element={<CallForPaperPage />} />
             <Route path="/about-journal/aim-scope" element={<AimScopePage />} />
