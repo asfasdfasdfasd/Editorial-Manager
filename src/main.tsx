@@ -23,6 +23,7 @@ import PublicationChargesPage from './pages/PublicationChargesPage'
 import PublicationPolicyPage from './pages/PublicationPolicyPage'
 import OpenAccessPolicyPage from './pages/OpenAccessPolicyPage'
 import InstructionsForAuthorPage from './pages/InstructionsForAuthorPage'
+import EditorialBoardMembersPage from './pages/EditorialBoardMembersPage'
 
 createRoot(document.getElementById('root')!).render(
     <BrowserRouter>
@@ -41,6 +42,7 @@ createRoot(document.getElementById('root')!).render(
             <Route path="/reviewer/instructions" element={<ReviewerInstructionsPage />} />
             <Route path="/reviewer/join" element={<ReviewerSignupPage />} />
             <Route path="/reviewer/login" element={<ReviewerLoginPage />} />
+            <Route path="/editorial-board/members" element={<EditorialBoardMembersPage />} />
             <Route path="/for-authors/publication-ethics" element={<PublicationEthicsPage />} />
             <Route path="/for-authors/charges" element={<PublicationChargesPage />} />
             <Route path="/for-authors/publication-policy" element={<PublicationPolicyPage />} />
