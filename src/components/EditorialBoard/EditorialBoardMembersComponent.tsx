@@ -9,6 +9,7 @@ import {
     FaBookOpen,
     FaUserCheck,
     FaBuildingColumns,
+    FaLocationDot,
     FaChevronDown,
     FaCopy,
     FaCheck,
@@ -19,6 +20,7 @@ interface Member {
     designation: string;
     department?: string;
     institution: string;
+    address: string;
     specialization?: string;
     email: string;
     mobile?: string;
@@ -40,7 +42,8 @@ const sections: Section[] = [
             {
                 name: 'Dr. Amit Goel',
                 designation: 'Professor',
-                institution: 'Swami Vivekanand Institute of Pharmacy, Chandigarh-Patiala National Highway, Ramnagar, near Banur, Rajpura Tehsil-Patiala, Punjab-140601',
+                institution: 'Swami Vivekanand Institute of Pharmacy',
+                address: 'Chandigarh-Patiala National Highway, Ramnagar, near Banur, Rajpura Tehsil-Patiala, Punjab-140601',
                 email: 'principalsvip@sviet.ac.in',
                 mobile: '9914100231',
             },
@@ -54,7 +57,8 @@ const sections: Section[] = [
             {
                 name: 'Mr. Anshu Gupta',
                 designation: 'Associate Professor',
-                institution: 'Swami Vivekanand College of Pharmacy, Chandigarh-Patiala National Highway, Ramnagar, near Banur, Rajpura Tehsil-Patiala, Punjab-140601',
+                institution: 'Swami Vivekanand College of Pharmacy',
+                address: 'Chandigarh-Patiala National Highway, Ramnagar, near Banur, Rajpura Tehsil-Patiala, Punjab-140601',
                 email: 'guptanshu2@gmail.com',
                 mobile: '9417141755',
             },
@@ -69,7 +73,8 @@ const sections: Section[] = [
                 name: 'Dr. Meenakshi Rana',
                 designation: 'Associate Professor',
                 department: 'Department of Pharmaceutical Chemistry',
-                institution: 'Swami Vivekanand College of Pharmacy, Banur, Rajpura, Punjab.',
+                institution: 'Swami Vivekanand College of Pharmacy',
+                address: 'Banur, Rajpura, Punjab.',
                 email: 'meenakshi87rana@gmail.com',
             },
         ],
@@ -83,14 +88,16 @@ const sections: Section[] = [
                 name: 'Dr. Damit Kumar',
                 designation: 'Associate Professor',
                 department: 'Department of Pharmaceutics',
-                institution: 'Swami Vivekanand College of Pharmacy, Banur, Rajpura, Punjab.',
+                institution: 'Swami Vivekanand College of Pharmacy',
+                address: 'Banur, Rajpura, Punjab.',
                 email: 'damitdhiman007@gmail.com',
             },
             {
                 name: 'Dr. Kapil Kumar Verma',
                 designation: 'Professor & Principal',
                 specialization: 'Pharmacology',
-                institution: 'Minerva College of Pharmacy, Indora-Kangra Himachal Pradesh.',
+                institution: 'Minerva College of Pharmacy',
+                address: 'Indora-Kangra Himachal Pradesh.',
                 email: 'kkvmpharm09@gmail.com',
             },
         ],
@@ -104,28 +111,32 @@ const sections: Section[] = [
                 name: 'Dr. Nikita khera',
                 designation: 'Assistant Professor',
                 department: 'Department of Pharmacy Practice',
-                institution: 'Swami Vivekanand College of Pharmacy, Banur, Rajpura, Punjab.',
+                institution: 'Swami Vivekanand College of Pharmacy',
+                address: 'Banur, Rajpura, Punjab.',
                 email: 'nikeetakhera02@gmail.com',
             },
             {
                 name: 'Mr. Manjul Singla',
                 designation: 'Assistant Professor',
                 department: 'Department of Radiology',
-                institution: 'Swami Vivekanand Faculty of Technology & Management, Banur, Rajpura.',
+                institution: 'Swami Vivekanand Faculty of Technology & Management',
+                address: 'Banur, Rajpura.',
                 email: 'hodradiology@sviet.ac.in',
             },
             {
                 name: 'Dr. Himani Punia',
                 designation: 'Assistant Professor',
                 department: 'Head, Allied Health Sciences',
-                institution: 'Saraswati Group of Colleges, Mohali, Punjab.',
+                institution: 'Saraswati Group of Colleges',
+                address: 'Mohali, Punjab.',
                 email: 'puniahimani@hau.ac.in',
             },
             {
                 name: 'Ms. Tamanna Dhiman',
                 designation: 'Assistant Professor',
                 department: 'Department of Pharmacognosy',
-                institution: 'Swami Vivekanand College of Pharmacy, Banur, Rajpura, Punjab.',
+                institution: 'Swami Vivekanand College of Pharmacy',
+                address: 'Banur, Rajpura, Punjab.',
                 email: 'tamannadhiman61@gmail.com',
             },
         ],
@@ -139,111 +150,128 @@ const sections: Section[] = [
                 name: 'Dr. Rajeev Garg',
                 designation: 'Principal',
                 specialization: 'Pharmaceutics',
-                institution: 'Guru Nanak Institute of Pharmacy, Delewal, Hoshiarpur, Punjab.',
+                institution: 'Guru Nanak Institute of Pharmacy',
+                address: 'Delewal, Hoshiarpur, Punjab.',
                 email: 'rgpharma@gmail.com',
             },
             {
                 name: 'Dr. Nishant Thakur',
                 designation: 'Associate Professor',
                 department: 'Department of Pharmaceutics',
-                institution: 'University Institute of Pharma Sciences, Chandigarh University, Gharuan, Mohali, Punjab.',
+                institution: 'University Institute of Pharma Sciences, Chandigarh University',
+                address: 'Gharuan, Mohali, Punjab.',
                 email: 'nishant.nt21@gmail.com',
             },
             {
                 name: 'Dr. Anjali',
                 designation: 'Professor',
                 department: 'Department of Pharmaceutical Chemistry',
-                institution: 'Desh Bhagat University, Mandi Gobindgarh, Punjab.',
+                institution: 'Desh Bhagat University',
+                address: 'Mandi Gobindgarh, Punjab.',
                 email: 'anjalipharm1985@gmail.com',
             },
             {
                 name: 'Dr. Parminder Kaur',
                 designation: 'Associate Professor',
                 department: 'Department of Pharmaceutical Chemistry',
-                institution: 'University Institute of Pharma Sciences, Chandigarh University, Gharuan Mohali, Punjab.',
+                institution: 'University Institute of Pharma Sciences, Chandigarh University',
+                address: 'Gharuan Mohali, Punjab.',
                 email: 'hundalparminder275@gmail.com',
             },
             {
                 name: 'Dr. Anu Jindal',
                 designation: 'Professor',
                 department: 'Department of Pharmacology',
-                institution: 'GHG Khalsa College of Pharmacy, Gurusar Sadhar, Ludhiana, Punjab.',
+                institution: 'GHG Khalsa College of Pharmacy',
+                address: 'Gurusar Sadhar, Ludhiana, Punjab.',
                 email: 'anumahajan78@gmail.com',
             },
             {
                 name: 'Dr. Ravi Ranjan Kumar',
                 designation: 'Associate Professor',
-                institution: 'University School of Allied Health Sciences, Rayat Bahra University, Mohali, Punjab.',
+                department: 'University School of Allied Health Sciences',
+                institution: 'Rayat Bahra University',
+                address: 'Mohali, Punjab.',
                 email: 'raviranjan.jnu10@gmail.com',
             },
             {
                 name: 'Dr. Nadeem Khan',
                 designation: 'Professor',
                 department: 'Department of Pharmacology',
-                institution: 'College of Pharmacy, RIMT University, Mandi Gobindgarh, Punjab.',
+                institution: 'College of Pharmacy, RIMT University',
+                address: 'Mandi Gobindgarh, Punjab.',
                 email: 'nadeem_khansre@yahoo.com',
             },
             {
                 name: 'Dr. Puneet Utreja',
                 designation: 'Professor',
                 department: 'Department of Pharmaceutics',
-                institution: 'PCTE group of institute Ludhiana, Punjab.',
+                institution: 'PCTE group of institute',
+                address: 'Ludhiana, Punjab.',
                 email: 'drutreja@gmail.com',
             },
             {
                 name: 'Dr. Jaspreet Kaur',
                 designation: 'Professor and Principal',
                 specialization: 'Pharmacognosy',
-                institution: 'College of Pharmacy, RIMT University, Mandi Gobindgarh, Punjab.',
+                institution: 'College of Pharmacy, RIMT University',
+                address: 'Mandi Gobindgarh, Punjab.',
                 email: 'principal.cop@rimt.ac.in',
             },
             {
                 name: 'Dr. Vandana Kharb',
                 designation: 'Professor',
                 department: 'Department of Pharmaceutics',
-                institution: 'Sachdeva College of Pharmacy, Gharuan, Punjab.',
+                institution: 'Sachdeva College of Pharmacy',
+                address: 'Gharuan, Punjab.',
                 email: 'vandana_pharmaceutics@yahoo.co.in',
             },
             {
                 name: 'Dr. Balbir Singh',
                 designation: 'Professor',
                 department: 'Department of Pharmacognosy',
-                institution: 'Guru Nanak Dev University, Amritsar, Punjab.',
+                institution: 'Guru Nanak Dev University',
+                address: 'Amritsar, Punjab.',
                 email: 'balbir.pharma@gndu.ac.in',
             },
             {
                 name: 'Dr. Neha Srivastava',
                 designation: 'Professor',
                 department: 'School of Pharmaceutics',
-                institution: 'RIMT University, Mandi Gobindgarh, Punjab.',
+                institution: 'RIMT University',
+                address: 'Mandi Gobindgarh, Punjab.',
                 email: 'nehasrvstva@gmail.com',
             },
             {
                 name: 'Dr. Ritchubabbar',
                 designation: 'Professor',
                 department: 'Department of Pharmaceutical Chemistry',
-                institution: 'Chitkara School of Pharmacy, Chitkara University Punjab.',
+                institution: 'Chitkara School of Pharmacy, Chitkara University',
+                address: 'Punjab.',
                 email: 'ritchu.babbar@chitkara.edu.in',
             },
             {
                 name: 'Dr. Pardeep Goyal',
                 designation: 'Professor and Principal',
                 department: 'Department of Pharmacology',
-                institution: 'Saraswati College of Pharmacy, Gharuan, Punjab.',
+                institution: 'Saraswati College of Pharmacy',
+                address: 'Gharuan, Punjab.',
                 email: 'golupharma1982@gmail.com',
             },
             {
                 name: 'Dr. Sourabh Kosey',
                 designation: 'Professor',
                 department: 'Department of Pharmacy Practice',
-                institution: 'ISF College of Pharmacy, Moga, Punjab.',
+                institution: 'ISF College of Pharmacy',
+                address: 'Moga, Punjab.',
                 email: 'sourabhkosey@gmail.com',
             },
             {
                 name: 'Dr. Sanjay Kumar',
                 designation: 'Director cum Principal',
                 specialization: 'Pharmacognosy and Photochemistry',
-                institution: 'Gautam college of Pharmacy Hamirpur, Himachal Pradesh.',
+                institution: 'Gautam college of Pharmacy',
+                address: 'Hamirpur, Himachal Pradesh.',
                 email: 'diwansanjay1981@gmail.com',
             },
             {
@@ -251,20 +279,24 @@ const sections: Section[] = [
                 designation: 'Professor and Dean',
                 specialization: 'Pharmacy Practice',
                 department: 'School of Pharmaceutical Sciences, Department of Pharmacy Practice',
-                institution: 'RIMT University, Mandi Gobindgarh, Punjab.',
+                institution: 'RIMT University',
+                address: 'Mandi Gobindgarh, Punjab.',
                 email: 'parminder.nain29@gmail.com',
             },
             {
                 name: 'Dr. Neelam',
                 designation: 'Professor',
                 department: 'Department of Pharmaceutics',
-                institution: 'MM College of Pharmacy, Mullana, Ambala, Haryana.',
+                institution: 'MM College of Pharmacy',
+                address: 'Mullana, Ambala, Haryana.',
                 email: 'neelam.mdu@glmail.com',
             },
             {
                 name: 'Dr. Vivek Sharma',
                 designation: 'Professor (Health Sciences)',
-                institution: 'CSIR-IHBT University Centre For Research and Development, Chandigarh University, Gharuan, Chandigarh.',
+                department: 'CSIR-IHBT University Centre For Research and Development',
+                institution: 'Chandigarh University',
+                address: 'Gharuan, Chandigarh.',
                 email: 'nkvivek@gmail.com',
             },
             {
@@ -272,7 +304,8 @@ const sections: Section[] = [
                 designation: 'Professor and Principal',
                 specialization: 'Pharmacology and Toxicology',
                 department: 'School of Health Sciences',
-                institution: 'Quantum University, Roorkee, Uttrakhand.',
+                institution: 'Quantum University',
+                address: 'Roorkee, Uttrakhand.',
                 email: 'verma2us@gmail.com',
             },
         ],
@@ -286,35 +319,40 @@ const sections: Section[] = [
                 name: 'Dr. Subheet Kumar Jain',
                 designation: 'Professor',
                 department: 'Department of Pharmaceutical Sciences',
-                institution: 'Guru Nanak Dev University, Amritsar, Punjab.',
+                institution: 'Guru Nanak Dev University',
+                address: 'Amritsar, Punjab.',
                 email: 'subhjeetjain.pharma@gndu.ac.in',
             },
             {
                 name: 'Dr. Sandeep Chaudhary',
                 designation: 'Professor',
                 department: 'Department of Pharmaceutics',
-                institution: 'ASBASJSM College of Pharmacy, Bela, Punjab.',
+                institution: 'ASBASJSM College of Pharmacy',
+                address: 'Bela, Punjab.',
                 email: 'drsandeeprajpura@gmail.com',
             },
             {
                 name: 'Dr. Suraj Bansal',
                 designation: 'Professor and Principal',
                 specialization: 'Pharmaceutical Chemistry',
-                institution: 'JIS Institute of Pharmacy, Ludhiana, Punjab.',
+                institution: 'JIS Institute of Pharmacy',
+                address: 'Ludhiana, Punjab.',
                 email: 'banaalsuraj@gmail.com',
             },
             {
                 name: 'Dr. Jagdeep Singh Dua',
                 designation: 'Associate Professor',
                 department: 'Department of Pharmaceutics',
-                institution: 'Shivalik College of Pharmacy Nangal Punjab.',
+                institution: 'Shivalik College of Pharmacy',
+                address: 'Nangal Punjab.',
                 email: 'jsdua2002@yahoo.com',
             },
             {
                 name: 'Dr. Jyoti Monga',
                 designation: 'Associate Professor',
                 department: 'Department of Pharmaceutical Chemistry',
-                institution: 'Ch.Devi Lal College of Pharmacy, Jagadhri, Haryana.',
+                institution: 'Ch.Devi Lal College of Pharmacy',
+                address: 'Jagadhri, Haryana.',
                 email: 'mongajyoti10@gmail.com',
             },
         ],
@@ -463,11 +501,20 @@ function MemberCard({ member, sectionId, highlight, sectionLabel }: MemberCardPr
             {/* Divider */}
             <div className="border-t border-slate-100" />
 
-            {/* Institution */}
-            <div className="px-4 py-3">
-                <p className="text-[11px] text-slate-600 leading-relaxed">
-                    {member.institution}
-                </p>
+            {/* Institution (College Name) & Address - 2 Distinct Fields */}
+            <div className="px-4 py-3 space-y-1.5">
+                {/* College / Institution Name */}
+                <div className="flex items-start gap-2 text-[11px] text-slate-800 leading-snug">
+                    <FaBuildingColumns className="size-3.5 shrink-0 text-slate-400 mt-0.5" />
+                    <span className="font-semibold">{hl(member.institution)}</span>
+                </div>
+                {/* Address */}
+                {member.address && (
+                    <div className="flex items-start gap-2 text-[11px] text-slate-500 leading-snug">
+                        <FaLocationDot className="size-3.5 shrink-0 text-slate-400 mt-0.5" />
+                        <span>{hl(member.address)}</span>
+                    </div>
+                )}
             </div>
 
             {/* Footer: contacts */}
@@ -518,7 +565,7 @@ function SectionBlock({ section, highlight, defaultOpen = true }: SectionBlockPr
             <button
                 type="button"
                 onClick={() => setOpen(o => !o)}
-                className="w-full flex items-center justify-between gap-3 px-5 py-4 bg-white hover:bg-slate-50 transition-colors text-left"
+                className="w-full flex items-center justify-between gap-3 px-5 py-4 bg-white hover:bg-slate-50 transition-colors text-left cursor-pointer"
             >
                 <div className="flex items-center gap-3">
                     <span className={`p-2 rounded-lg text-sm ${pillColor}`}>
@@ -574,7 +621,8 @@ const EditorialBoardMembersComponent: React.FC = () => {
             m.designation.toLowerCase().includes(q) ||
             (m.department && m.department.toLowerCase().includes(q)) ||
             (m.specialization && m.specialization.toLowerCase().includes(q)) ||
-            m.institution.toLowerCase().includes(q)
+            m.institution.toLowerCase().includes(q) ||
+            m.address.toLowerCase().includes(q)
         );
     }, [trimmed]);
 
@@ -597,7 +645,7 @@ const EditorialBoardMembersComponent: React.FC = () => {
                     <FaMagnifyingGlass className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 size-4 pointer-events-none" />
                     <input
                         type="text"
-                        placeholder="Search by name, email, mobile, institution, department..."
+                        placeholder="Search by name, college, address, email, mobile, specialization..."
                         value={query}
                         onChange={e => setQuery(e.target.value)}
                         className="w-full pl-11 pr-10 py-3 bg-white border border-slate-200 rounded-xl text-sm text-slate-900 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 shadow-xs transition-all"
@@ -606,7 +654,7 @@ const EditorialBoardMembersComponent: React.FC = () => {
                         <button
                             type="button"
                             onClick={() => setQuery('')}
-                            className="absolute right-3.5 top-1/2 -translate-y-1/2 p-1 text-slate-400 hover:text-slate-700 transition-colors"
+                            className="absolute right-3.5 top-1/2 -translate-y-1/2 p-1 text-slate-400 hover:text-slate-700 transition-colors cursor-pointer"
                             aria-label="Clear search"
                         >
                             <FaXmark className="size-4" />
@@ -617,12 +665,12 @@ const EditorialBoardMembersComponent: React.FC = () => {
                 {/* Search hint pills */}
                 {!query && (
                     <div className="flex flex-wrap gap-2 mt-2.5">
-                        {['Professor', 'Pharmaceutics', 'Pharmacology', 'Punjab', 'gmail.com'].map(hint => (
+                        {['Swami Vivekanand', 'Patiala', 'Pharmaceutics', 'Pharmacology', 'Punjab', 'Haryana'].map(hint => (
                             <button
                                 key={hint}
                                 type="button"
                                 onClick={() => setQuery(hint)}
-                                className="text-[11px] text-slate-500 bg-slate-100 hover:bg-slate-200 px-2.5 py-1 rounded-full transition-colors"
+                                className="text-[11px] text-slate-500 bg-slate-100 hover:bg-slate-200 px-2.5 py-1 rounded-full transition-colors cursor-pointer"
                             >
                                 {hint}
                             </button>
@@ -644,7 +692,7 @@ const EditorialBoardMembersComponent: React.FC = () => {
                         <button
                             type="button"
                             onClick={() => setQuery('')}
-                            className="text-xs text-blue-600 hover:underline font-medium"
+                            className="text-xs text-blue-600 hover:underline font-medium cursor-pointer"
                         >
                             Clear search
                         </button>
@@ -654,7 +702,7 @@ const EditorialBoardMembersComponent: React.FC = () => {
                         <div className="bg-white border border-slate-200 rounded-xl p-10 text-center">
                             <FaMagnifyingGlass className="size-8 text-slate-300 mx-auto mb-3" />
                             <p className="text-sm font-semibold text-slate-700 mb-1">No members matched "{trimmed}"</p>
-                            <p className="text-xs text-slate-500">Try searching by name, email, phone, department, or institution.</p>
+                            <p className="text-xs text-slate-500">Try searching by name, college, address, email, or department.</p>
                         </div>
                     ) : (
                         <div className="space-y-3">

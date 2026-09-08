@@ -24,24 +24,22 @@ const Footer = () => {
 
     return (
         <footer className="w-full bg-slate-50 border-t border-slate-200">
-            <div className="py-6 px-4 text-center max-w-4xl mx-auto space-y-1.5">
-                <p className="text-slate-800 font-bold text-sm md:text-base tracking-wide">
-                    ©2026 Journal of Advanced Pharmaceutical and Health Sciences Education and Research (JAPHSER)
-                </p>
-                <p className="text-slate-600 text-xs md:text-sm font-medium">
-                    Published by{' '}
-                    <span className="font-semibold text-slate-800">IP Innovative Publication Pvt. Ltd.</span>{' '}
-                    (
-                    <a
-                        href="https://www.ipinnovative.com"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-blue-600 hover:underline hover:text-blue-700 transition-colors"
-                    >
-                        www.ipinnovative.com
-                    </a>
-                    )
-                </p>
+            <div className="py-8 px-4 text-center max-w-3xl mx-auto flex flex-col items-center space-y-3">
+                <div className="h-16 w-16 rounded-full border border-slate-200 bg-white flex items-center justify-center shadow-xs overflow-hidden">
+                    <img src="/logo.png" alt="JAPHSER Logo" className="h-14 w-14 object-contain" />
+                </div>
+                <div className="space-y-1.5">
+                    <h2 className="text-slate-900 font-bold text-base md:text-lg tracking-tight leading-snug">
+                        Journal of Advanced Pharmaceutical and Health Sciences Education and Research (JAPHSER)
+                    </h2>
+                    <p className="text-slate-600 text-xs md:text-sm font-medium">
+                        Published by{' '}
+                        <span className="font-semibold text-slate-800">Pharmacy Research Group, Swami Vivekanand College of Pharmacy (SVCP)</span>
+                    </p>
+                    <p className="text-slate-500 text-xs">
+                        ©2026 JAPHSER. Open-access, peer-reviewed academic journal.
+                    </p>
+                </div>
             </div>
 
             {/* Middle Section: Full Width Color Strip Tabs  */}
@@ -68,7 +66,7 @@ const Footer = () => {
                     >
                         www.ipinnovative.com
                     </a>
-                     {" "}All rights reserved.
+                    {" "}All rights reserved.
                 </p>
             </div>
         </footer>

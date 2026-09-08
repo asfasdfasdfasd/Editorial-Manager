@@ -84,7 +84,7 @@ const Navbar: React.FC = () => {
                 <div className="flex items-center sm:items-start gap-5 text-center sm:text-left">
                     {/* Logo */}
                     <div className="h-20 w-20 rounded-full border border-slate-200 bg-white flex items-center justify-center shadow-sm shrink-0 overflow-hidden">
-                        <img src="/logo.png" alt="Logo" className="h-18 w-18 object-contain" />
+                        <img src="/logo.png" alt="Logo" className="h-full w-full object-contain" />
                     </div>
 
                     {/* Text Stack */}
@@ -94,7 +94,7 @@ const Navbar: React.FC = () => {
                         </h1>
                         <p className="text-sm text-slate-700 font-medium tracking-wide">
                             {/* E-ISSN: XXXX-XXXX <span className="mx-1 text-slate-300">|</span> */}
-                            
+
                             ISSN: XXXX-XXXX
                         </p>
                         <p className="text-sm text-slate-600">
