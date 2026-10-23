@@ -77,44 +77,45 @@ const Navbar: React.FC = () => {
     };
 
     return (
-        <header className="w-full flex flex-col shadow-sm relative z-50 bg-white">
-            {/* Top Bar: Clean, academic brand header */}
-            <div className="w-full px-4 md:px-8 py-4 flex flex-col md:flex-row justify-between items-center gap-4 border-b border-slate-100">
+        <header className="w-full flex flex-col shadow-sm relative z-50">
+            {/* Top Bar: Gradient background with white text */}
+            <div
+                className="w-full px-4 md:px-8 py-5 flex flex-col md:flex-row justify-between items-center gap-4 text-white"
+                style={{ background: 'linear-gradient(68deg, #598ad4, #1e6adc)' }}
+            >
                 {/* Journal Branding Cluster */}
                 <div className="flex items-center sm:items-start gap-5 text-center sm:text-left">
                     {/* Logo */}
-                    <div className="h-20 w-20 rounded-full border border-slate-200 bg-white flex items-center justify-center shadow-sm shrink-0 overflow-hidden">
-                        <img src="/logo.png" alt="Logo" className="h-full w-full object-contain" />
+                    <div className="h-20 w-20 rounded-full border-2 border-white/80 bg-white flex items-center justify-center shadow-md shrink-0 overflow-hidden ring-4 ring-white/20">
+                        <img src="/logo.png" alt="Logo" className="h-full w-full object-contain p-1" />
                     </div>
 
                     {/* Text Stack */}
-                    <div className="flex flex-col gap-1.5">
-                        <h1 className="text-xl md:text-2xl font-bold text-slate-950 tracking-tight leading-snug">
+                    <div className="flex flex-col gap-1.5 text-white">
+                        <h1 className="text-xl md:text-2xl font-bold text-white tracking-tight leading-snug">
                             Journal of Advanced Pharmaceutical and Health Sciences Education and Research
                         </h1>
-                        <p className="text-sm text-slate-700 font-medium tracking-wide">
-                            {/* E-ISSN: XXXX-XXXX <span className="mx-1 text-slate-300">|</span> */}
-
+                        <p className="text-sm text-blue-100 font-medium tracking-wide">
                             ISSN: XXXX-XXXX
                         </p>
-                        <p className="text-sm text-slate-600">
+                        <p className="text-sm text-blue-50/95 leading-relaxed max-w-3xl">
                             Open-access, peer-reviewed academic journal on pharmaceutical sciences, health sciences and healthcare research
                         </p>
                     </div>
                 </div>
 
                 {/* Rightside Action Buttons */}
-                <div className="flex items-center gap-2 text-xs font-semibold shrink-0">
+                <div className="flex items-center gap-2.5 text-xs font-semibold shrink-0">
                     <Link
                         to="/signup"
-                        className="text-slate-600 hover:text-blue-600 hover:bg-slate-50 px-3 py-2 rounded-md transition-all duration-200 flex items-center gap-1.5"
+                        className="text-white hover:bg-white/20 border border-white/40 px-3.5 py-2 rounded-md transition-all duration-200 flex items-center gap-1.5 shadow-xs backdrop-blur-xs"
                     >
-                        <FaUserPlus className="opacity-80" />
+                        <FaUserPlus className="opacity-90" />
                         Register
                     </Link>
                     <Link
                         to="/login"
-                        className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md transition-all duration-200 shadow-sm flex items-center gap-1.5"
+                        className="bg-white text-[#1e6adc] hover:bg-blue-50 px-4 py-2 rounded-md transition-all duration-200 shadow-md flex items-center gap-1.5 font-bold"
                     >
                         <FaLock className="text-[10px]" />
                         Login
