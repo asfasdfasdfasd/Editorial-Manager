@@ -25,35 +25,6 @@ const HomePage: React.FC = () => {
             <Navbar />
 
             <main className="flex-1 w-full max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10 antialiased space-y-12">
-
-                <section>
-
-                    {/* Section Header */}
-                    <div className="mb-6">
-                        <div className="flex items-center gap-2 mb-2">
-                            <div className="w-8 h-[3px] bg-slate-800 rounded-full"></div>
-                            <span className="text-xs font-bold uppercase tracking-[0.15em] text-slate-500">
-                                Contact Information
-                            </span>
-                        </div>
-                        <h2 className="text-2xl md:text-3xl font-extrabold text-slate-900 tracking-tight">
-                            Editorial Contact Details
-                        </h2>
-                        <p className="text-sm text-slate-500 mt-1 max-w-2xl">
-                            Journal of Advanced Pharmaceutical and Health Sciences Education and Research (JAPHSER)
-                        </p>
-                    </div>
-                </section>
-                {/* Figure 1: Journal Banner Section */}
-                <section className="w-full overflow-hidden rounded-xl sm:rounded-2xl border border-slate-200 bg-white shadow-sm p-3 sm:p-4">
-                    <img
-                        src="/8d4977b9-f754-4b95-8695-4be37fcd13e6.png"
-                        alt="Figure 1: Journal of Advanced Pharmaceutical and Health Sciences Education and Research Banner"
-                        className="w-full h-auto max-h-[500px] object-contain rounded-lg sm:rounded-xl mx-auto block"
-                    />
-
-                </section>
-
                 {/* Journal Overview Section: Figure 2 (Left) + Write-up (Right) (Chitkara JPTRM Style) */}
                 <section className="bg-white rounded-xl sm:rounded-2xl border border-slate-200 p-6 sm:p-8 md:p-10 shadow-sm">
                     <div className="flex flex-col md:flex-row gap-8 lg:gap-12 items-start">
@@ -120,9 +91,37 @@ const HomePage: React.FC = () => {
                     </div>
                 </section>
 
+                {/* Figure 1: Journal Banner Section */}
+                <section className="w-full overflow-hidden rounded-xl sm:rounded-2xl border border-slate-200 bg-white shadow-sm p-3 sm:p-4">
+                    <img
+                        src="/8d4977b9-f754-4b95-8695-4be37fcd13e6.png"
+                        alt="Figure 1: Journal of Advanced Pharmaceutical and Health Sciences Education and Research Banner"
+                        className="w-full h-auto max-h-[500px] object-contain rounded-lg sm:rounded-xl mx-auto block"
+                    />
+
+                </section>
+
+
+
+
                 {/* Editorial Contact Details Section */}
                 <section>
 
+                    {/* Section Header */}
+                    <div className="mb-6">
+                        <div className="flex items-center gap-2 mb-2">
+                            <div className="w-8 h-[3px] bg-slate-800 rounded-full"></div>
+                            <span className="text-xs font-bold uppercase tracking-[0.15em] text-slate-500">
+                                Contact Information
+                            </span>
+                        </div>
+                        <h2 className="text-2xl md:text-3xl font-extrabold text-slate-900 tracking-tight">
+                            Editorial Contact Details
+                        </h2>
+                        <p className="text-sm text-slate-500 mt-1 max-w-2xl">
+                            Journal of Advanced Pharmaceutical and Health Sciences Education and Research (JAPHSER)
+                        </p>
+                    </div>
 
                     {/* Cards — Editor-in-Chief (full width) + Editor & Publisher (side by side) */}
                     <div className="flex flex-col gap-6">
@@ -139,17 +138,17 @@ const HomePage: React.FC = () => {
                                 <div className="flex-1 p-6 md:p-7 flex flex-col sm:flex-row sm:items-start gap-6">
                                     <div className="flex-1 space-y-3">
                                         <div>
-                                            <h3 className="text-lg font-bold text-slate-900">Dr. Manish Goswami</h3>
-                                            <p className="text-sm text-slate-500 font-medium">Principal &amp; Professor</p>
+                                            <h3 className="text-lg font-bold text-slate-900">Dr.  Amit Goyal</h3>
+                                            <p className="text-sm text-slate-500 font-medium">Professor &amp; Principal</p>
                                         </div>
                                         <div className="flex items-start gap-2.5 text-sm text-slate-600">
                                             <FaBuilding className="text-slate-400 shrink-0 mt-1" size={13} />
-                                            <span>Swami Vivekanand College of Pharmacy (SVCP)</span>
+                                            <span>Swami Vivekanand Institute of Pharmacy</span>
                                         </div>
                                         <div className="flex items-start gap-2.5 text-sm text-slate-500">
                                             <FaLocationDot className="text-slate-400 shrink-0 mt-1" size={13} />
                                             <span className="leading-relaxed">
-                                                Chandigarh-Patiala National Highway in Sector-8, Ramnagar, near Banur, Rajpura Tehsil, Patiala Punjab-140601.
+                                                Chandigarh-Patiala National Highway, Ramnagar, near Banur, Rajpura Tehsil-Patiala, Punjab-140601
                                             </span>
                                         </div>
                                     </div>
@@ -157,12 +156,12 @@ const HomePage: React.FC = () => {
                                     <div className="sm:border-l sm:border-slate-100 sm:pl-6 space-y-3 shrink-0">
                                         <div className="flex items-center gap-2.5 text-sm">
                                             <FaPhone className="text-slate-400" size={12} />
-                                            <span className="font-semibold text-slate-700">98722-62777</span>
+                                            <span className="font-semibold text-slate-700">9914100231</span>
                                         </div>
                                         <div className="flex items-center gap-2.5 text-sm">
                                             <FaEnvelope className="text-slate-400" size={12} />
-                                            <a href="mailto:principalsvcp@sviet.ac.in" className="font-semibold text-blue-600 hover:text-blue-800 hover:underline">
-                                                principalsvcp@sviet.ac.in
+                                            <a href="mailto:principalsvip@sviet.ac.in" className="font-semibold text-blue-600 hover:text-blue-800 hover:underline">
+                                                principalsvip@sviet.ac.in
                                             </a>
                                         </div>
                                     </div>
@@ -181,27 +180,40 @@ const HomePage: React.FC = () => {
                                 </div>
                                 <div className="p-6 space-y-4">
                                     <div>
-                                        <h4 className="text-lg font-bold text-slate-900">Dr. Amit Goel</h4>
-                                        <p className="text-sm text-slate-500 font-medium">Professor</p>
+                                        <h4 className="text-lg font-bold text-slate-900">Mr. Anshu Gupta</h4>
+                                        <p className="text-sm text-slate-500 font-medium">Associate Professor</p>
                                     </div>
                                     <div className="space-y-2.5 text-sm text-slate-600">
                                         <div className="flex items-start gap-2.5">
                                             <FaBuilding className="text-slate-400 shrink-0 mt-1" size={13} />
-                                            <span>Swami Vivekanand College of Pharmacy (SVCP)</span>
+                                            <span>Swami Vivekanand College of Pharmacy</span>
                                         </div>
                                         <div className="flex items-start gap-2.5">
                                             <FaLocationDot className="text-slate-400 shrink-0 mt-1" size={13} />
                                             <span className="text-slate-500 leading-relaxed">
-                                                Chandigarh-Patiala National Highway in Sector-8, Ramnagar, near Banur, Rajpura Tehsil, Patiala Punjab-140601.
+                                                Chandigarh-Patiala National Highway, Ramnagar, near Banur, Rajpura Tehsil-Patiala, Punjab-140601
                                             </span>
                                         </div>
                                     </div>
-                                    <div className="pt-3 border-t border-slate-100">
-                                        <div className="flex items-center gap-2.5 text-sm">
-                                            <FaPhone className="text-slate-400" size={12} />
-                                            <span className="font-semibold text-slate-700">99141-00231</span>
+
+                                    <div className='flex border-t border-slate-100 items-center w-full justify-between h-full'>
+
+                                        <div className="pt-3 ">
+                                            <div className="flex items-center gap-2.5 text-sm">
+                                                <FaPhone className="text-slate-400" size={12} />
+                                                <span className="font-semibold text-slate-700">9417141755</span>
+                                            </div>
+                                        </div>
+                                        <div className="pt-3 ">
+                                            <div className="flex items-center gap-2.5 text-sm">
+                                                <FaEnvelope className="text-slate-400" size={12} />
+                                                <a href="mailto:guptanshu2@gmail.com" className="font-semibold text-blue-600 hover:text-blue-800 hover:underline">
+                                                    guptanshu2@gmail.com
+                                                </a>
+                                            </div>
                                         </div>
                                     </div>
+
                                 </div>
                             </div>
 
