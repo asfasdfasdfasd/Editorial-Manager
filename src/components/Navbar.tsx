@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { FaUserPlus, FaLock } from 'react-icons/fa6';
 
 interface NavItem {
     label: string;
@@ -12,7 +11,7 @@ interface NavItem {
 const navItems: NavItem[] = [
     { label: 'Home', href: '/' },
     {
-        label: 'About Journal',
+        label: 'About the journal',
         subItems: [
             { label: 'Journal Information', href: '/about-journal/information' },
             { label: 'Aim & scope', href: '/about-journal/aim-scope' },
@@ -61,6 +60,14 @@ const navItems: NavItem[] = [
             { label: 'Reviewer login', href: '/reviewer/login' }
         ],
         align: 'right'
+    },
+    {
+        label: "Copyright form",
+        href: "/copyright-form"
+    },
+    {
+        label: "Contact us",
+        href: "/contact-us"
     }
 ];
 
@@ -105,7 +112,7 @@ const Navbar: React.FC = () => {
                 </div>
 
                 {/* Rightside Action Buttons */}
-                <div className="flex items-center gap-2.5 text-xs font-semibold shrink-0">
+                {/* <div className="flex items-center gap-2.5 text-xs font-semibold shrink-0">
                     <Link
                         to="/signup"
                         className="text-white hover:bg-white/20 border border-white/40 px-3.5 py-2 rounded-md transition-all duration-200 flex items-center gap-1.5 shadow-xs backdrop-blur-xs"
@@ -120,34 +127,42 @@ const Navbar: React.FC = () => {
                         <FaLock className="text-[10px]" />
                         Login
                     </Link>
-                </div>
+                </div> */}
             </div>
 
             {/* Bottom Navigation Bar: Full-width container */}
             <div className="w-full bg-slate-900 text-white border-b border-slate-950">
                 {/* Center alignment wrapper across the grid layout width */}
-                <div className="w-full flex items-center justify-between md:justify-center px-4 md:px-8">
+                <div className="w-full flex items-center justify-between px-4">
 
                     {/* Desktop Navigation: Centered horizontal strip items */}
-                    <nav className="hidden md:flex flex-wrap items-center justify-center text-xs lg:text-sm font-medium">
+                    <nav className="hidden lg:flex w-full items-center justify-center whitespace-nowrap text-xs xl:text-sm font-medium">
                         {navItems.map((item) => {
                             if (item.subItems) {
                                 const dropdownAlignClass = item.align === 'right' ? 'right-0' : 'left-0';
                                 return (
-                                    <div key={item.label} className="relative group py-3.5 px-4 flex items-center gap-1.5 text-slate-200 cursor-pointer transition-colors hover:bg-white hover:text-slate-800">
+                                    <div
+                                        key={item.label}
+                                        className="relative group py-3.5 px-3 flex items-center gap-1.5 shrink-0 whitespace-nowrap text-slate-200 cursor-pointer transition-colors hover:bg-white hover:text-slate-800"
+                                    >
                                         <span className="select-none">{item.label}</span>
                                         <svg className="w-3 h-3 transition-transform duration-300 group-hover:rotate-180 text-slate-400 group-hover:text-slate-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M19 9l-7 7-7-7" />
                                         </svg>
 
                                         {/* Dropdown Menu */}
-                                        <div className={`absolute top-full ${dropdownAlignClass} pt-0 w-60 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 transform translate-y-1 group-hover:translate-y-0 shadow-2xl`}>
-                                            <div className="bg-white border border-slate-100 shadow-xl py-1 ring-1 ring-black/5 overflow-hidden">
+                                        <div
+                                            className={`absolute top-full ${dropdownAlignClass} w-60 pt-1
+    opacity-0 invisible translate-y-2
+    group-hover:opacity-100 group-hover:visible group-hover:translate-y-0
+    transition-all duration-200 ease-out z-[100]`}
+                                        >
+                                            <div className="bg-white border border-slate-200 rounded-md shadow-xl py-1 overflow-hidden">
                                                 {item.subItems.map((sub) => (
                                                     <Link
                                                         key={sub.label}
                                                         to={sub.href}
-                                                        className="block px-4 py-2.5 text-xs text-slate-700 hover:bg-slate-50 hover:text-blue-600 transition-colors font-medium border-l-2 border-transparent hover:border-blue-600"
+                                                        className="block px-4 py-3 text-xs text-slate-700 hover:bg-slate-50 hover:text-blue-600 transition-colors font-medium border-l-2 border-transparent hover:border-blue-600"
                                                     >
                                                         {sub.label}
                                                     </Link>
@@ -161,7 +176,7 @@ const Navbar: React.FC = () => {
                                     <Link
                                         key={item.label}
                                         to={item.href || '#'}
-                                        className="py-3.5 px-4 text-slate-200 hover:bg-white hover:text-slate-800 transition-colors flex items-center"
+                                        className="py-3.5 px-3 shrink-0 whitespace-nowrap text-slate-200 hover:bg-white hover:text-slate-800 transition-colors flex items-center"
                                     >
                                         {item.label}
                                     </Link>
@@ -171,7 +186,7 @@ const Navbar: React.FC = () => {
                     </nav>
 
                     {/* Mobile Hamburger Button Bar */}
-                    <div className="flex md:hidden items-center justify-between w-full py-3">
+                    <div className="flex lg:hidden items-center justify-between w-full py-3">
                         <span className="text-xs font-semibold text-slate-400 uppercase tracking-wider">Journal Menu</span>
                         <button
                             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
@@ -191,7 +206,7 @@ const Navbar: React.FC = () => {
             </div>
 
             {/* Mobile Menu Panel */}
-            <div className={`md:hidden bg-slate-950 text-white transition-all duration-300 overflow-hidden ${isMobileMenuOpen ? 'max-h-125 opacity-100 py-3' : 'max-h-0 opacity-0 pointer-events-none'}`}>
+            <div className={`lg:hidden bg-slate-950 text-white transition-all duration-300 overflow-y-auto ${isMobileMenuOpen ? 'max-h-[80vh] opacity-100 py-3' : 'max-h-0 opacity-0 pointer-events-none'}`}>
                 <nav className="flex flex-col px-4 gap-1">
                     {navItems.map((item) => {
                         if (item.subItems) {

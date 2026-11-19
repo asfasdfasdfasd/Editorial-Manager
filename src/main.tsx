@@ -24,6 +24,8 @@ import PublicationPolicyPage from './pages/PublicationPolicyPage'
 import OpenAccessPolicyPage from './pages/OpenAccessPolicyPage'
 import InstructionsForAuthorPage from './pages/InstructionsForAuthorPage'
 import EditorialBoardMembersPage from './pages/EditorialBoardMembersPage'
+import CopyrightForm from './pages/CopyrightForm'
+import ContactUs from './pages/ContactUsPage'
 
 createRoot(document.getElementById('root')!).render(
     <BrowserRouter>
@@ -51,6 +53,9 @@ createRoot(document.getElementById('root')!).render(
             <Route path="/about-journal/information" element={<JournalInformationPage />} />
             <Route path="/about-journal/call-for-paper" element={<CallForPaperPage />} />
             <Route path="/about-journal/aim-scope" element={<AimScopePage />} />
+            <Route path="/copyright-form" element={<CopyrightForm />} />
+            <Route path="/contact-us" element={<ContactUs />} />
+
         </Routes>
     </BrowserRouter>
 )

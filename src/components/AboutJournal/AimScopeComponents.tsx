@@ -18,7 +18,7 @@ const AimScopeComponents: React.FC = () => {
 
                 {/* Core Mission Statement */}
                 <p className="text-sm md:text-base leading-relaxed text-slate-900 font-medium">
-                    The Journal of Advanced Pharmaceutical and Health Sciences Education and Research (JAPHSER) is an open access, peer reviewed academic journal for the publication of scientific research and review papers in the fields of pharmaceutical sciences, health sciences and healthcare research.
+                    The Journal of Advanced Pharmaceutical and Health Sciences Education &Research (JAPHSER) is an open access, multidisciplinary, peer reviewed journal for the publication of scientific research and review papers in the fields of pharmaceutical sciences, health sciences and healthcare research.
                 </p>
 
                 {/* Core Features List */}
@@ -38,7 +38,7 @@ const AimScopeComponents: React.FC = () => {
                     <li className="flex items-start gap-3">
                         <span className="mt-2 h-1.5 w-1.5 rounded-full bg-slate-400 shrink-0" />
                         <span className="leading-relaxed">
-                            JAPHSER promote scientific innovation, academic collaboration and the spreading of knowledge that supports improved healthcare practices, patient safety, professional education, and public health development.
+                            JAPHSER promote scientific innovation, academic collaboration and the spreading of knowledge that supports improved healthcare practices, patient safety, professional education and public health development.
                         </span>
                     </li>
                 </ul>

@@ -20,27 +20,22 @@ const CallForPaperComponents: React.FC = () => {
                     <li className="flex items-start gap-3">
                         <FaCheckCircle className="text-slate-400 size-4 shrink-0 mt-0.5" />
                         <span>
-                            Original, unpublished and un-plagiarized research and review articles are invited for the publication in the Journal of Advanced Pharmaceutical and Health Sciences Education and Research (JAPHSER). Articles will be considered for publication only if they fall within the domain of the aim and the scope of the Journal.
+                            Original, unpublished and un-plagiarized research and review articles are invited for the publication in the Journal of Advanced Pharmaceutical and Health Sciences Education & Research (JAPHSER). Articles will be considered for publication only if they fall within the domain of the aim and the scope of the Journal.
                         </span>
                     </li>
                     <li className="flex items-start gap-3">
                         <FaCheckCircle className="text-slate-400 size-4 shrink-0 mt-0.5" />
                         <span>
-                            The submission of manuscript is open throughout the year. The articles will be published in JAPHSER four times in a year (January, April, July, and October).
+                            The submission of manuscript is open throughout the year. The articles will be published in JAPHSER two times in a year (Issues: January-June & July- December).
                         </span>
                     </li>
                     <li className="flex items-start gap-3">
                         <FaCheckCircle className="text-slate-400 size-4 shrink-0 mt-0.5" />
                         <span>
-                            The domain of the Journal is national and submissions are subject to double-blind peer review process.
+                            The domain of the Journal is national and submissions are subject to peer review process.
                         </span>
                     </li>
-                    <li className="flex items-start gap-3">
-                        <FaCheckCircle className="text-slate-400 size-4 shrink-0 mt-0.5" />
-                        <span>
-                            The JAPHSER does not charge any submission and publication fees.
-                        </span>
-                    </li>
+
                     <li className="flex items-start gap-3">
                         <FaCheckCircle className="text-slate-400 size-4 shrink-0 mt-0.5" />
                         <span>
@@ -52,7 +47,15 @@ const CallForPaperComponents: React.FC = () => {
                 {/* Editorial Office Inquiry Footer */}
                 <div className="pt-4 border-t border-slate-100 flex items-center gap-2 text-xs text-slate-500 font-medium">
                     <FaEnvelope className="text-slate-400 shrink-0" />
-                    <span>If having further queries, please contact the Editorial Office.</span>
+                    <span>
+                        For further queries, please contact the Editorial Office at{' '}
+                        <a
+                            href="mailto:ejournal@svcp.org.in"
+                            className="text-blue-700 underline hover:text-blue-900"
+                        >
+                            ejournal@svcp.org.in
+                        </a>
+                    </span>
                 </div>
 
             </div>
