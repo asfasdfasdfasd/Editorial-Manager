@@ -61,8 +61,13 @@ const PeerReviewPolicy: React.FC = () => {
                     <h1 className="text-2xl md:text-3xl font-bold text-slate-900 tracking-tight flex items-center gap-3">
                         <FaShieldHalved className="text-slate-600 size-6" /> Peer Review Policy
                     </h1>
-                    <p className="text-sm text-slate-500 mt-3 leading-relaxed">
-                        Peer review is a critical component of the paper publication process. It plays a very important role in maintaining the integrity, reliability, and quality of published research articles, while supporting the advancement of ethical and scientific knowledge. The journal is committed to ensuring timely review and publication of accepted manuscripts.
+                    <p className="text-justify text-sm text-slate-500 mt-3 leading-relaxed">
+                        Peer review is a critical component of the article publication process. It plays a very important role in maintaining the integrity, reliability and quality of published research articles.  The journal is committed to ensuring timely review and publication of submitted manuscripts. Peer review process ensures an independent assessment and accuracy of the results described in manuscript.
+                    </p>
+                    <p className="text-justify text-sm text-slate-500 mt-3 leading-relaxed">
+                        To support high publication standards, all submitted manuscripts undergo a rigorous and confidential peer review process. Simultaneous submission of the same manuscripts for publication to other journals is strictly prohibited. All submitted manuscripts will be treated as highly confidential documents. Editors and reviewers shall maintain strict confidentiality.
+
+
                     </p>
                 </div>
 
@@ -84,15 +89,15 @@ const PeerReviewPolicy: React.FC = () => {
                             },
                             {
                                 title: 'Final Editorial Authority',
-                                desc: 'The final decision for publication will be made by the Editor-in-Chief based on reviewers\' reports. Authors will be promptly informed of the editor\'s decision.'
+                                desc: 'The final decision for article publication will be made by the Chief Editor based on reviewer’s reports. Authors will be promptly informed of the editors decision through email.'
                             },
                             {
                                 title: 'Conflict of Interest Disclosures',
-                                desc: 'Editors and reviewers must disclose any conflicts of interest arising from competitive, collaborative, or any relationships with the authors and recuse themselves where necessary.'
+                                desc: 'Editors and reviewers must disclose any conflicts of interest arising from competitive, collaborative or any relationships with the authors and recuse themselves where necessary.'
                             },
                             {
                                 title: 'Anonymity & Verification',
-                                desc: 'The peer review process is a confidential system and the identities of reviewers should not be disclosed. Authors may contact the journal for any clarification regarding the policy.'
+                                desc: 'The peer review process is an extremely confidential system, and the identities of reviewers should not be disclosed to authors. Authors may contact the journal for any clarification regarding the policy.'
                             }
                         ].map((item, i) => (
                             <div key={i} className="p-4 border border-slate-200 rounded-lg bg-white">
@@ -119,12 +124,12 @@ const PeerReviewPolicy: React.FC = () => {
                             defaultOpen={true}
                         >
                             <p className="text-[13px] text-slate-600 leading-relaxed">
-                                All submitted manuscripts to the journal will be initially assessed by the Editor-in-Chief to ensure compliance with the journal author guidelines and ethical standards. Manuscripts that fail to meet the ethical requirements of the journal will be rejected at this stage without peer review.
+                                All submitted manuscripts to the JAPHSER will be initially assessed by the Editors to ensure compliance with the journal author guidelines and ethical standards. Manuscripts that fail to meet the ethical requirements of the journal will be rejected at this stage without peer review.
                             </p>
                             <ul className="text-xs text-slate-500 leading-relaxed space-y-1.5 pl-1">
-                                <li>• Submission of improperly formatted or incomplete manuscripts will be returned to the corresponding author for correction and resubmission.</li>
-                                <li>• The Editor-in-Chief may consult Editors, Associate Editors, and Editorial Board Members in case of conflicts of interest to determine alignment with scope and scientific/medical validity.</li>
-                                <li>• Decisions at this stage focus strictly on suitability and technical soundness rather than impact. All rejection decisions will be confirmed by the journal Editor-in-Chief.</li>
+                                <li>• Submission of improperly formatted or incomplete manuscript will be returned to the corresponding author for correction and resubmission.</li>
+                                <li>• The Chief Editor may consult Editor and Editorial Board Members in case of conflicts of interest to determine alignment with scope and scientific/medical validity.</li>
+                                <li>• Decisions at this stage focus strictly on suitability and technical soundness rather than impact. All rejection decisions will be confirmed by the journal Chief Editor.</li>
                             </ul>
                         </StepAccordion>
 
@@ -135,17 +140,9 @@ const PeerReviewPolicy: React.FC = () => {
                             title="Peer Review Process"
                         >
                             <p className="text-[13px] text-slate-600 leading-relaxed">
-                                Manuscripts successfully completing the initial screening will be assigned to at least two independent subject experts for review. The journal follows a <strong className="text-slate-800 font-semibold">double-blind peer review process</strong> wherein the identities of both authors and reviewers are concealed from each other. Only the Editor-in-Chief will have access information for both parties.
+                                Manuscripts successfully completing the initial screening will be assigned to at least two independent subject experts in the corresponding area for review. The journal follows a double-blind peer review process wherein the identities of authors and reviewers are concealed from each other. Only the Editors will have access information for both parties.
                             </p>
-                            <div className="text-xs text-slate-500 leading-relaxed space-y-1.5 pl-1">
-                                <p className="font-semibold text-slate-700 mb-1">Suggested Reviewer Parameters:</p>
-                                <p>Authors may suggest potential reviewers during submission, provided they:</p>
-                                <ul className="space-y-1">
-                                    <li>• Have not co-authored publications with the authors within the past five years.</li>
-                                    <li>• Are not affiliated with the same institutions as the authors.</li>
-                                    <li>• Do not have any ongoing collaboration with the authors.</li>
-                                </ul>
-                            </div>
+                            
                         </StepAccordion>
 
                         {/* Step 3 */}
@@ -199,12 +196,14 @@ const PeerReviewPolicy: React.FC = () => {
                         </div>
                         <p className="text-xs font-medium text-slate-500 italic">
                             Decisions made at this stage are final and cannot be changed.
+
+
                         </p>
                     </div>
                 </section>
 
                 {/* Special Issues */}
-                <section className="p-4 border border-dashed border-slate-300 rounded-lg bg-slate-50/30 flex gap-3 text-xs leading-relaxed text-slate-600">
+                {/* <section className="p-4 border border-dashed border-slate-300 rounded-lg bg-slate-50/30 flex gap-3 text-xs leading-relaxed text-slate-600">
                     <FaTriangleExclamation className="text-slate-400 size-4 shrink-0 mt-0.5" />
                     <div>
                         <span className="font-bold text-slate-800 block mb-0.5">Special Issues Note:</span>
@@ -212,7 +211,7 @@ const PeerReviewPolicy: React.FC = () => {
                             For special issues, the Editor forwards the manuscript and related materials (including reviewer details) to the Editor-in-Chief for independent evaluation. The Editor-in-Chief provides a final recommendation, and any rejection decision at this stage is considered final.
                         </p>
                     </div>
-                </section>
+                </section> */}
             </div>
             <Footer />
         </>

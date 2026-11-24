@@ -9,8 +9,6 @@ interface ReviewerRegisterData {
     researchExperience: string;
     academicExperience: string;
     email: string;
-    password: string;
-    confirmPassword: string;
     mobileNumber: string;
     orcidId: string;
     agreeTerms: boolean;
@@ -24,8 +22,6 @@ const initialFormState: ReviewerRegisterData = {
     researchExperience: '',
     academicExperience: '',
     email: '',
-    password: '',
-    confirmPassword: '',
     mobileNumber: '',
     orcidId: '',
     agreeTerms: false,
@@ -35,7 +31,6 @@ const JoinAsReviewer: React.FC = () => {
     const fileInputRef = useRef<HTMLInputElement>(null);
     const [formData, setFormData] = useState<ReviewerRegisterData>(initialFormState);
     const [cvFile, setCvFile] = useState<File | null>(null);
-    const [showPassword, setShowPassword] = useState(false);
     const [errors, setErrors] = useState<Partial<Record<keyof ReviewerRegisterData | 'cvFile', string>>>({});
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
@@ -89,17 +84,6 @@ const JoinAsReviewer: React.FC = () => {
             newErrors.email = 'E-mail is required.';
         } else if (!emailRegex.test(formData.email)) {
             newErrors.email = 'Please enter a valid e-mail address.';
-        }
-
-        const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,15}$/;
-        if (!formData.password) {
-            newErrors.password = 'Password is required.';
-        } else if (!passwordRegex.test(formData.password)) {
-            newErrors.password = 'Must be 8-15 characters with uppercase, lowercase, number, and symbol.';
-        }
-
-        if (formData.password !== formData.confirmPassword) {
-            newErrors.confirmPassword = 'Passwords do not match.';
         }
 
         const phoneRegex = /^\d{10}$/;
@@ -211,27 +195,6 @@ const JoinAsReviewer: React.FC = () => {
                             <input type="email" name="email" value={formData.email} onChange={handleChange} placeholder="reviewer@example.com"
                                 className={`w-full px-3 py-2 border rounded focus:outline-none focus:ring-2 ${errors.email ? 'border-red-500 focus:ring-red-100' : 'border-slate-200 focus:ring-blue-100 focus:border-blue-500'}`} />
                             {errors.email && <p className="text-[10px] text-red-500">{errors.email}</p>}
-                        </div>
-
-                        {/* Password Configuration */}
-                        <div className="space-y-1 relative">
-                            <label className="font-semibold text-slate-700 block">Password <span className="text-red-500">*</span></label>
-                            <div className="relative">
-                                <input type={showPassword ? 'text' : 'password'} name="password" value={formData.password} onChange={handleChange} placeholder="Create password"
-                                    className={`w-full px-3 py-2 border rounded pr-8 focus:outline-none focus:ring-2 ${errors.password ? 'border-red-500 focus:ring-red-100' : 'border-slate-200 focus:ring-blue-100 focus:border-blue-500'}`} />
-                                <button type="button" onClick={() => setShowPassword(!showPassword)} className="absolute right-2.5 top-2.5 text-slate-400 hover:text-slate-600">
-                                    {showPassword ? <FaEyeSlash size={13} /> : <FaEye size={13} />}
-                                </button>
-                            </div>
-                            {errors.password && <p className="text-[10px] text-red-500">{errors.password}</p>}
-                        </div>
-
-                        {/* Confirm Password */}
-                        <div className="space-y-1">
-                            <label className="font-semibold text-slate-700 block">Confirm Password <span className="text-red-500">*</span></label>
-                            <input type={showPassword ? 'text' : 'password'} name="confirmPassword" value={formData.confirmPassword} onChange={handleChange} placeholder="Retype password"
-                                className={`w-full px-3 py-2 border rounded focus:outline-none focus:ring-2 ${errors.confirmPassword ? 'border-red-500 focus:ring-red-100' : 'border-slate-200 focus:ring-blue-100 focus:border-blue-500'}`} />
-                            {errors.confirmPassword && <p className="text-[10px] text-red-500">{errors.confirmPassword}</p>}
                         </div>
 
                         {/* Mobile Number */}

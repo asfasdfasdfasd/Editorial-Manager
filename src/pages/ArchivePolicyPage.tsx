@@ -18,20 +18,20 @@ const ArchivePolicyPage: React.FC = () => {
 
                 {/* Archiving Policy */}
                 <section className="mb-10">
-                    <p className="text-[13px] text-slate-600 leading-relaxed">
-                        The journal will ensure long-term preservation of all published research articles, special issues, and related content through available archiving facilities. The journal will be utilized DATA STORE services for systematic storage and maintenance of published materials. The journal permits to archiving and storage of published articles by individuals, academic institutions, organizations, and other entities. However, such use must be strictly complying with the terms and conditions of the journal. Proper citation of the original publication and due acknowledgment of the authors are mandatory in all cases. The publisher reserves the right to modify or update journal-related details displayed on article pages as deemed necessary.
+                    <p className="text-[13px] text-justify text-slate-600 leading-relaxed">
+                        The journal will ensure long term preservation of all published research articles, special issues and related content through available archiving facilities. JAPHSER reserves the right to modify or update journal related details displayed on article pages as deemed necessary. Authors are strongly suggested to independently index and showcase their published work on recognized academic platforms such as Google Scholar, Publons, Research Gate, Academia.edu and other similar repositories to enhance the visibility and impact of their research. This self-indexing should be carried out through the author's personal profile on these platforms. The journal do not assume any responsibility for indexing on third-party websites as these platforms operate independently and are beyond the control or domain of the journal
                     </p>
                 </section>
 
                 {/* Indexing of Published Articles */}
-                <section className="mb-10">
+                {/* <section className="mb-10">
                     <h2 className="text-lg font-bold text-slate-900 mb-3 tracking-tight">
                         Indexing of Published Articles
                     </h2>
                     <p className="text-[13px] text-slate-600 leading-relaxed">
                         Authors are strongly encouraged to independently index and showcase their published work on recognized academic platforms such as Google Scholar, Publons, ResearchGate, Academia.edu, and other similar repositories to enhance the visibility and impact of their research. This self-indexing should be carried out through the author's personal profile on these platforms. The journal do not assume any responsibility for indexing on third-party websites, as these platforms operate independently and are beyond the control or domain of the journal.
                     </p>
-                </section>
+                </section> */}
 
             </div>
             <Footer />

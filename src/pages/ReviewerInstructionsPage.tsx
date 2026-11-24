@@ -18,12 +18,12 @@ const ReviewerInstructionsPage: React.FC = () => {
 
                 {/* Introduction */}
                 <section className="mb-10">
-                    <div className="space-y-3 text-[13px] text-slate-600 leading-relaxed">
+                    <div className="space-y-3 text-[13px] text-justify text-slate-600 leading-relaxed">
                         <p>
-                            Peer review is a critical process aimed to enhance the quality and scientific integrity of manuscripts under evaluation. Although it is a time consuming task and remains essential for maintaining the journal standards of research article publishing. The journal acknowledges and sincerely appreciates the time, expertise and their efforts in this evaluation process.
+                            Peer review is a critical process aimed to enhance the quality and scientific integrity of manuscripts under evaluation. Although it is a time consuming task and remains essential for maintaining the journal standards of research article publishing. The journal acknowledges and sincerely appreciates the time, expertise and their efforts in this evaluation process. The peer review process is confidential and conducted anonymously; reviewers must maintain confidentiality of manuscripts.
                         </p>
                         <p>
-                            Reviewers are responsible for carefully and ethically assessing submitted manuscripts. They are expected to give fair, respectful, constructive and unbiased feedback to authors. The review process should be conducted in a manner which supports to authors in strengthening the quality and impact of their work. The journal editorial board identifies potential reviewers through multiple sources including professional networks, published scientific literature, bibliographic databases and reviewer suggestions provided by authors. The remarks and recommendations of reviewers play a decisive role in the editorial decision making process regarding the acceptance or rejection of submitted manuscripts.
+                            Reviewers are responsible for carefully and ethically assessing submitted manuscripts. They are expected to give fair, respectful, constructive and unbiased feedback to authors. The review process should be conducted in a manner which supports to authors in strengthening the quality and impact of their work. The journal editorial board identifies potential reviewers through multiple sources including professional networks, published scientific literature and bibliographic databases. The editor’s decision on the choice of referees is final.  The remarks and recommendations of reviewers play a decisive role in the editorial decision making process regarding the acceptance or rejection of submitted manuscripts. The decision taken regarding the manuscript for publication will be communicated to the author by journal Editors via e-mail.
                         </p>
                     </div>
                 </section>

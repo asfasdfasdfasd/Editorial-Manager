@@ -16,15 +16,15 @@ const Footer: React.FC = () => {
                 {/* Journal Title & Information */}
                 <div className="space-y-2 max-w-2xl">
                     <h2 className="text-white font-extrabold text-lg md:text-2xl tracking-tight leading-snug">
-                        Journal of Advanced Pharmaceutical and Health Sciences Education and Research
+                        Journal of Advanced Pharmaceutical and Health Sciences Education & Research 
                     </h2>
                     <p className="text-blue-400 font-semibold text-xs md:text-sm tracking-wide uppercase">
-                        (JAPHSER) &bull; ISSN: XXXX-XXXX
+                         e-ISSN: XXXX-XXXX
                     </p>
                     <p className="text-slate-300 text-xs md:text-sm font-medium">
                         Published by{' '}
                         <span className="text-white font-semibold underline decoration-blue-500 underline-offset-4">
-                            Pharmacy Research Group, Swami Vivekanand College of Pharmacy (SVCP)
+                            @Copyright Swami Vivekanand College of Pharmacy. All Rights Reserved
                         </span>
                     </p>
                     

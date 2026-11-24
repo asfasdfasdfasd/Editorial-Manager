@@ -48,7 +48,7 @@ const navItems: NavItem[] = [
         subItems: [
             { label: 'Journal Editorial Policy', href: '/policies/editorial' },
             { label: 'Peer Review Policy', href: '/policies/review' },
-            { label: 'Achieve Policy', href: '/policies/achieve' }
+            { label: 'Archive Policy', href: '/policies/achieve' }
         ],
         align: 'right'
     },
@@ -57,7 +57,6 @@ const navItems: NavItem[] = [
         subItems: [
             { label: 'Reviewer instruction', href: '/reviewer/instructions' },
             { label: 'Join as reviewer', href: '/reviewer/join' },
-            { label: 'Reviewer login', href: '/reviewer/login' }
         ],
         align: 'right'
     },
@@ -100,13 +99,13 @@ const Navbar: React.FC = () => {
                     {/* Text Stack */}
                     <div className="flex flex-col gap-1.5 text-white">
                         <h1 className="text-xl md:text-2xl font-bold text-white tracking-tight leading-snug">
-                            Journal of Advanced Pharmaceutical and Health Sciences Education and Research
+                            Journal of Advanced Pharmaceutical and Health Sciences Education & Research
                         </h1>
                         <p className="text-sm text-blue-100 font-medium tracking-wide">
-                            ISSN: XXXX-XXXX
+                            e-ISSN: XXXX-XXXX
                         </p>
                         <p className="text-sm text-blue-50/95 leading-relaxed max-w-3xl">
-                            Open-access, peer-reviewed academic journal on pharmaceutical sciences, health sciences and healthcare research
+                            Open access, multidisciplinary, peer-reviewed referred journal in the discipline of pharmaceutical and Health Sciences
                         </p>
                     </div>
                 </div>
