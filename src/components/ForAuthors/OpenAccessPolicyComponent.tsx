@@ -15,12 +15,8 @@ const OpenAccessPolicyComponent: React.FC = () => {
 
                 {/* Mission and Scope Overview */}
                 <div className="space-y-4">
-                    <p className="text-xs md:text-sm leading-relaxed text-slate-600">
-                        The <strong>Journal of Advanced Pharmaceutical and Health Sciences Education and Research (JAPHSER) </strong> provides immediate free access without subscription charges and registration barriers. The journal provides access to its content on the principle that making research work freely available to the researchers supports a greater national and international exchange of knowledge. The journal contents such as text, graphics, images and other contents are protected by copyright of the journal.
-                    </p>
-
-                    <p className="text-xs md:text-sm leading-relaxed text-slate-600 pt-4 border-t border-slate-100">
-                        The open access policy of the <strong>JAPHSER</strong> aims at increasing the visibility and accessibility of the published content to researcher’s. Online free access and indexing in a larger number of bibliographic databases add to the high visibility and research impact.
+                    <p className="text-xs md:text-sm text-justify leading-relaxed text-slate-600">
+                        The open access policy of the journal aims to increase the visibility and accessibility of the published content to researchers. Online free access and indexing in a larger number of bibliographic databases add to the high visibility and research impact. The Journal of Advanced Pharmaceutical and Health Sciences Education & Research provide immediate free access articles without subscription charges and registration barriers. The journal provides access to its content on the principle that making research work freely available to the researchers supports a greater exchange of knowledge. The journal contents such as text, graphics, images and other contents are protected by copyright of the journal.
                     </p>
                 </div>
 

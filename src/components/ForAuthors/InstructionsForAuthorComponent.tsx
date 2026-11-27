@@ -17,9 +17,9 @@ const InstructionsForAuthorComponent = () => {
             </div>
 
             {/* Introductory Journal Scope */}
-            <div className="bg-white border border-slate-200 rounded-lg p-6 mb-8 shadow-sm text-xs md:text-sm leading-relaxed text-slate-600">
+            <div className="bg-white border text-justify border-slate-200 rounded-lg p-6 mb-8 shadow-sm text-xs md:text-sm leading-relaxed text-slate-600">
                 <p>
-                    The Journal of Advanced Pharmaceutical and Health Sciences Education and Research (JAPHSER) is an online Journal which publishes innovative research articles and review papers in field of Pharmacognos, Pharmaceutical Chemistry, Biopharmaceutics, Pharmacokinetics, Medicinal Chemistry, Computational Chemistry, Molecular Drug Design, Phytochemistry, Pharmacology, Pharmaceutical Analysis, Pharmacy Practice, Clinical and Hospital Pharmacy, Cell Biology, Health Sciences and Public Health, Allied Health & Paramedical Sciences and related field.
+                    The Journal of Advanced Pharmaceutical and Health Sciences Education & Research (JAPHSER) is an online Journal which publishes innovative research articles and review papers in field of Pharmacognosy, Pharmaceutical Chemistry, Bio-pharmaceutics, Pharmacokinetics, Medicinal Chemistry, Computational Chemistry, Molecular Drug Design, Phytochemistry, Pharmacology, Pharmaceutical Analysis, Pharmacy Practice, Clinical and Hospital Pharmacy, Cell Biology, Health Sciences and Public Health, Allied Health & Paramedical Sciences and related fields.
                 </p>
             </div>
 
@@ -29,11 +29,11 @@ const InstructionsForAuthorComponent = () => {
                     <FaFileWord className="text-slate-500 size-4" /> Preparation of Articles
                 </h2>
                 <div className="bg-slate-50 border border-slate-200 rounded-lg p-5 space-y-4 text-xs md:text-sm leading-relaxed text-slate-600">
-                    <ul className="space-y-2 list-disc pl-4">
+                    <ul className="space-y-2 list-disc pl-4 text-justify">
                         <li>Authors submitting manuscripts are required to adhere to journal author guidelines.</li>
                         <li>Manuscripts that do not meet the prescribed formatting and submission requirements may be returned by the Editorial Office for revision before being considered for peer review process.</li>
                         <li>The following word limits apply to manuscripts submitted to JAPHSER and vary according to the article type.</li>
-                        <li>All manuscripts must be written in English and the text should be prepared in A4-size paper format with single spacing with 1-inch margins on all sides.</li>
+                        <li>All manuscripts must be written in English, in Time New Roman (Font Size 12) in 1.5 space, and the text must be prepared in A4-size paper with single spacing with 1-inch margins on all the four sides. </li>
                     </ul>
 
                     <div className="pt-3 border-t border-slate-200">
@@ -46,9 +46,8 @@ const InstructionsForAuthorComponent = () => {
                             <span className="bg-white border border-slate-200 px-2 py-1 rounded">5. Materials and Methods</span>
                             <span className="bg-white border border-slate-200 px-2 py-1 rounded">6. Results & Discussion</span>
                             <span className="bg-white border border-slate-200 px-2 py-1 rounded">7. Conclusions</span>
-                            <span className="bg-white border border-slate-200 px-2 py-1 rounded">8. Acknowledgements</span>
+                            <span className="bg-white border border-slate-200 px-2 py-1 rounded">8. Acknowledgement (optional)</span>
                             <span className="bg-white border border-slate-200 px-2 py-1 rounded">9. References</span>
-                            <span className="bg-white border border-slate-200 px-2 py-1 rounded">10. Author brief information with passport size photo</span>
                         </div>
                     </div>
                 </div>
@@ -65,12 +64,13 @@ const InstructionsForAuthorComponent = () => {
                     <div className="bg-white border border-slate-200 p-4 rounded-md shadow-sm">
                         <h3 className="font-bold text-slate-900 border-b border-slate-100 pb-1 mb-2">Title Page</h3>
                         <ul className="space-y-1.5 pl-3 list-disc">
-                            <li>The title page should be included full title of the manuscript in bold, title case, and font size 14.</li>
+                            <li>The title page should be included full title of the manuscript in bold and font size 14.</li>
                             <li>Author names should be presented in font size 12, using initials followed by surnames.</li>
-                            <li>The institutional affiliations and addresses with pin code of all authors should be provided below the author names.</li>
+                            <li>Authors name should be presented in font size 12 using initials followed by surnames.</li>
+                            <li>The institutional affiliations and addresses with pin code of all authors should be provided just below the authors name.</li>
                             <li>The corresponding author should be clearly identified with an asterisk (*).</li>
                             <li>The title of manuscript should be concise, informative and accurately reflect the content of the study.</li>
-                            <li>At the bottom left corner of the title page, include the heading “*Address for Correspondence” followed by the corresponding author e-mail address. All correspondence regarding the manuscript will be directed to the designated corresponding author.</li>
+                            <li>At the bottom left corner of the title page, include the heading “*Address for Correspondence” followed by the corresponding author e-mail address. The corresponding author assumes responsibility for all communication throughout the editorial and publication process.</li>
                         </ul>
                     </div>
 
@@ -78,7 +78,7 @@ const InstructionsForAuthorComponent = () => {
                     <div className="bg-white border border-slate-200 p-4 rounded-md shadow-sm space-y-4">
                         <div>
                             <h3 className="font-bold text-slate-900 border-b border-slate-100 pb-1 mb-2">Abstract</h3>
-                            <p>The abstract of manuscript should concise summary of the study that should briefly reflect all aspects of the study for articles, the abstract should not exceed 150 -250 words.</p>
+                            <p className='text-justify'>The abstract of manuscript should concise summary of the study that should briefly reflect all aspects of the study. The abstract should not exceed 250 words followed by keywords.</p>
                         </div>
                         <div>
                             <h3 className="font-bold text-slate-900 border-b border-slate-100 pb-1 mb-2">Keywords</h3>
@@ -90,11 +90,11 @@ const InstructionsForAuthorComponent = () => {
                     <div className="bg-white border border-slate-200 p-4 rounded-md shadow-sm space-y-4">
                         <div>
                             <h3 className="font-bold text-slate-900 border-b border-slate-100 pb-1 mb-2">Introduction</h3>
-                            <p>The Introduction should be provided a concise background to the research problem, highlighting its significance and relevance. It must include a brief review of the significant literature, identify existing knowledge gaps and clearly state the objectives and foundation of the research study.</p>
+                            <p className='text-justify'>The Introduction should be provided a concise background to the research problem, highlighting its significance and relevance. It must include a brief review of the significant literature, identify existing knowledge gaps and clearly state the objectives and foundation of the research study.</p>
                         </div>
                         <div>
                             <h3 className="font-bold text-slate-900 border-b border-slate-100 pb-1 mb-2">Materials and Methods</h3>
-                            <p>This section must describe the materials, equipment, study site and period of experimentation used in the experimental research. Authors should be provide sufficient details regarding the experimental design, procedures, data collection methods and analytical techniques employed to ensure the reproducibility of the study.</p>
+                            <p className='text-justify'>This section must describe the materials, equipment, study site and period of experimentation used in the experimental research. Authors should be provide sufficient details regarding the experimental design, procedures, data collection methods and analytical techniques employed to ensure the reproducibility of the study.</p>
                         </div>
                     </div>
 
@@ -102,11 +102,11 @@ const InstructionsForAuthorComponent = () => {
                     <div className="bg-white border border-slate-200 p-4 rounded-md shadow-sm space-y-4">
                         <div>
                             <h3 className="font-bold text-slate-900 border-b border-slate-100 pb-1 mb-2">Result & Discussions</h3>
-                            <p>The results section should include the findings of the study clearly and objectively. Data should be reported in a logical sequence using text, tables and figures where suitable. Statistical significance should be clearly indicated.</p>
+                            <p className='text-justify'>The results section should include the findings of the study clearly and objectively. Data should be reported in a logical sequence using text, tables and figures where suitable. Statistical significance should be clearly indicated.</p>
                         </div>
                         <div>
                             <h3 className="font-bold text-slate-900 border-b border-slate-100 pb-1 mb-2">Conclusions</h3>
-                            <p>Articles conclusion should be concise including key findings of the study. It should highlights the practical and/or clinical significance of the results, discuss their potential applications and clearly state both the strengths and limitations of the study.</p>
+                            <p className='text-justify'>Articles conclusion should be concise including key findings of the study. It should highlights the practical and/or clinical significance of the results, discuss their potential applications and clearly state both the strengths and limitations of the study.</p>
                         </div>
                     </div>
 
@@ -165,7 +165,7 @@ const InstructionsForAuthorComponent = () => {
                     {/* Acknowledgements */}
                     <div>
                         <h3 className="font-bold text-slate-900 mb-1">Acknowledgement (if applicable)</h3>
-                        <p>Acknowledgement should be placed at the end of the manuscript just immediately before the references section. Authors may acknowledge individuals who contributed to the work but do not meet the criteria for authorship as well as to recognize financial support, donated materials, institutional assistance or other significant contributions to the research.</p>
+                        <p className='text-justify'>Acknowledgement should be placed at the end of the manuscript just immediately before the references section. Authors may acknowledge individuals who contributed to the work but do not meet the criteria for authorship as well as to recognize financial support, donated materials, institutional assistance or other significant contributions to the research.</p>
                     </div>
                 </div>
             </section>
