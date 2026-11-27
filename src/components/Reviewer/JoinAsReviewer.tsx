@@ -1,5 +1,5 @@
 import React, { useState, useRef } from 'react';
-import { FaUserGraduate, FaCloudUploadAlt, FaEye, FaEyeSlash } from 'react-icons/fa';
+import { FaUserGraduate, FaCloudUploadAlt } from 'react-icons/fa';
 
 interface ReviewerRegisterData {
     salutation: string;

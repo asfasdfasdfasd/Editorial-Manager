@@ -5,7 +5,6 @@ import {
     FaUserCheck,
     FaFileSignature,
     FaEnvelopeOpenText,
-    FaTriangleExclamation
 } from 'react-icons/fa6';
 import { FiChevronDown } from 'react-icons/fi';
 import Navbar from '../components/Navbar';
