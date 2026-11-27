@@ -1,4 +1,3 @@
-import { FaUsers, FaScaleBalanced } from 'react-icons/fa6';
 import { BsFileText } from 'react-icons/bs';
 export default function PublicationPolicyComponents() {
     return (
